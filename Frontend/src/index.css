@@ -1,0 +1,73 @@
+body{
+
+    margin:0;
+    font-family: Arial, sans-serif;
+
+}
+
+
+nav{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px;
+
+    background:#1e293b;
+
+    color:white;
+
+}
+
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin:15px;
+
+    font-size:16px;
+
+}
+
+
+nav a:hover{
+
+    color:#38bdf8;
+
+}
+
+
+h1{
+
+    text-align:center;
+
+    margin-top:50px;
+
+}
+.home{
+
+    text-align:center;
+
+    margin-top:80px;
+
+}
+
+
+.home h1{
+
+    font-size:40px;
+
+}
+
+
+.home p{
+
+    font-size:20px;
+
+    margin:20px;
+
+}

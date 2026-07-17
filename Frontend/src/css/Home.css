@@ -1,0 +1,336 @@
+.landing{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        135deg,
+        #020617,
+        #1e293b
+    );
+
+    color:white;
+
+}
+
+
+/* HERO */
+
+
+.hero{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:80px;
+
+}
+
+
+.hero-left{
+
+    width:55%;
+
+}
+
+
+.hero-left h1{
+
+    font-size:60px;
+
+    font-weight:800;
+
+}
+
+
+.hero-left span{
+
+    color:#38bdf8;
+
+}
+
+
+
+.hero-left p{
+
+    font-size:20px;
+
+    color:#cbd5e1;
+
+    line-height:1.6;
+
+}
+
+
+
+/* BUTTON */
+
+
+.primary-btn,
+.secondary-btn{
+
+
+    display:inline-block;
+
+    padding:14px 30px;
+
+    border-radius:30px;
+
+    margin-top:30px;
+
+    margin-right:15px;
+
+    text-decoration:none;
+
+}
+
+
+.primary-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+
+
+.secondary-btn{
+
+    border:2px solid #38bdf8;
+
+    color:white;
+
+}
+
+
+
+
+/* AI CARD */
+
+
+.hero-right{
+
+    width:40%;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+.ai-card{
+
+
+    padding:40px;
+
+    width:320px;
+
+
+    border-radius:25px;
+
+
+    background:
+
+    rgba(255,255,255,.1);
+
+
+    text-align:center;
+
+
+}
+
+
+
+.brain{
+
+    font-size:80px;
+
+}
+
+
+
+.stats{
+
+    display:flex;
+
+    justify-content:space-around;
+
+}
+
+
+
+.stats h3{
+
+    font-size:35px;
+
+    color:#38bdf8;
+
+}
+
+
+
+
+
+/* FEATURES */
+
+
+.features{
+
+    padding:60px;
+
+    text-align:center;
+
+}
+
+
+
+.feature-container{
+
+
+    display:flex;
+
+    gap:30px;
+
+    justify-content:center;
+
+}
+
+
+
+.feature-box{
+
+
+    width:300px;
+
+    padding:30px;
+
+    border-radius:20px;
+
+
+    background:
+
+    rgba(255,255,255,.1);
+
+
+}
+
+
+
+
+.feature-box:hover{
+
+
+    transform:translateY(-10px);
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+/* WORKFLOW */
+
+
+.workflow{
+
+    padding:60px;
+
+    text-align:center;
+
+}
+
+
+
+.steps{
+
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+
+}
+
+
+
+.steps div{
+
+
+    padding:25px;
+
+
+    background:#1e40af;
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+
+/* TECHNOLOGY */
+
+
+.technology{
+
+
+    text-align:center;
+
+    padding:50px;
+
+
+}
+
+
+
+.technology span{
+
+
+    background:#2563eb;
+
+    padding:12px 25px;
+
+    margin:10px;
+
+    border-radius:25px;
+
+    display:inline-block;
+
+}
+
+
+
+
+
+footer{
+
+
+    text-align:center;
+
+    padding:30px;
+
+}
+.primary-btn,
+.secondary-btn{
+
+    border:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}

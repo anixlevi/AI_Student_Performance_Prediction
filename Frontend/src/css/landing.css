@@ -1,0 +1,671 @@
+/* ================================
+   AI LANDING PAGE DESIGN
+================================ */
+
+.landing{
+
+    min-height:100vh;
+
+    background:
+    radial-gradient(
+        circle at top right,
+        #2563eb,
+        transparent 35%
+    ),
+    linear-gradient(
+        135deg,
+        #020617,
+        #0f172a
+    );
+
+    color:white;
+
+    overflow:hidden;
+
+}
+
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+
+.hero{
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+
+    padding:90px 80px;
+
+
+    gap:60px;
+
+
+}
+
+
+
+.hero-left{
+
+    width:55%;
+
+}
+
+
+
+.hero-left h1{
+
+
+    font-size:64px;
+
+    line-height:1.1;
+
+    font-weight:800;
+
+    letter-spacing:-2px;
+
+
+}
+
+
+
+.hero-left h1 span{
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #38bdf8,
+        #a855f7
+    );
+
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+
+}
+
+
+
+.hero-left p{
+
+
+    margin-top:25px;
+
+
+    font-size:20px;
+
+
+    color:#cbd5e1;
+
+
+    max-width:600px;
+
+
+    line-height:1.7;
+
+
+}
+
+
+
+
+/* BUTTONS */
+
+
+.primary-btn,
+.secondary-btn{
+
+
+    display:inline-flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    margin-top:35px;
+
+
+    margin-right:15px;
+
+
+    padding:15px 35px;
+
+
+    border-radius:50px;
+
+
+    font-weight:700;
+
+
+    text-decoration:none;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+.primary-btn{
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #2563eb,
+        #7c3aed
+    );
+
+
+    color:white;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(37,99,235,.4);
+
+
+}
+
+
+
+.secondary-btn{
+
+
+    border:
+
+    2px solid #38bdf8;
+
+
+    color:white;
+
+
+}
+
+
+
+
+.primary-btn:hover,
+.secondary-btn:hover{
+
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+/* ================================
+ AI CARD
+================================ */
+
+
+.hero-right{
+
+
+    width:40%;
+
+
+    display:flex;
+
+    justify-content:center;
+
+
+}
+
+
+
+.ai-card{
+
+
+    width:360px;
+
+
+    padding:40px;
+
+
+    border-radius:30px;
+
+
+    background:
+
+    rgba(255,255,255,.08);
+
+
+    border:
+
+    1px solid rgba(255,255,255,.15);
+
+
+    backdrop-filter:blur(20px);
+
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.4);
+
+
+}
+
+
+
+
+.brain{
+
+
+    font-size:90px;
+
+
+    animation:
+
+    floating 3s infinite ease-in-out;
+
+
+}
+
+
+
+
+@keyframes floating{
+
+
+    50%{
+
+        transform:translateY(-20px);
+
+    }
+
+
+}
+
+
+
+
+.ai-card h2{
+
+
+    font-size:28px;
+
+
+    margin:20px 0;
+
+
+}
+
+
+
+.stats{
+
+
+    display:flex;
+
+    justify-content:space-around;
+
+
+}
+
+
+
+.stats h3{
+
+
+    font-size:35px;
+
+
+    color:#38bdf8;
+
+
+    margin:0;
+
+
+}
+
+
+
+
+.stats p{
+
+
+    color:#cbd5e1;
+
+
+}
+
+
+
+
+/* ================================
+ FEATURES
+================================ */
+
+
+.features{
+
+
+    padding:70px 80px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.features h2{
+
+
+    font-size:42px;
+
+
+}
+
+
+
+.feature-container{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:30px;
+
+
+    margin-top:50px;
+
+
+}
+
+
+
+
+.feature-box{
+
+
+    padding:35px;
+
+
+    border-radius:25px;
+
+
+    background:
+
+    rgba(255,255,255,.08);
+
+
+    border:
+
+    1px solid rgba(255,255,255,.1);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+.feature-box:hover{
+
+
+    transform:translateY(-12px);
+
+
+    background:
+
+    rgba(255,255,255,.15);
+
+
+}
+
+
+
+.feature-box h3{
+
+
+    font-size:25px;
+
+
+}
+
+
+
+
+.feature-box p{
+
+
+    color:#cbd5e1;
+
+
+    line-height:1.6;
+
+
+}
+
+
+
+
+/* ================================
+ WORKFLOW
+================================ */
+
+
+.workflow{
+
+
+    padding:70px 80px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.steps{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    gap:25px;
+
+
+    margin-top:40px;
+
+
+}
+
+
+
+.steps div{
+
+
+    min-width:150px;
+
+
+    padding:30px;
+
+
+    border-radius:25px;
+
+
+    background:
+
+    rgba(255,255,255,.1);
+
+
+    font-size:20px;
+
+
+}
+
+
+
+
+/* ================================
+ TECHNOLOGY
+================================ */
+
+
+.technology{
+
+
+    padding:70px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.technology span{
+
+
+    display:inline-block;
+
+
+    margin:10px;
+
+
+    padding:14px 28px;
+
+
+    border-radius:50px;
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #2563eb,
+        #7c3aed
+    );
+
+
+    font-weight:600;
+
+
+}
+
+
+
+
+/* FOOTER */
+
+
+.landing footer{
+
+
+    text-align:center;
+
+
+    padding:30px;
+
+
+    color:#cbd5e1;
+
+
+}
+
+
+
+
+
+/* ================================
+ RESPONSIVE
+================================ */
+
+
+@media(max-width:900px){
+
+
+.hero{
+
+
+    flex-direction:column;
+
+
+    padding:50px 25px;
+
+
+}
+
+
+.hero-left,
+.hero-right{
+
+
+    width:100%;
+
+
+}
+
+
+
+.hero-left h1{
+
+
+    font-size:42px;
+
+
+}
+
+
+
+.feature-container{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+.steps{
+
+
+    flex-direction:column;
+
+
+}
+
+
+
+}

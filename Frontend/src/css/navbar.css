@@ -1,0 +1,26 @@
+.navbar{
+    background:#111827 !important;
+    padding:14px 40px;
+}
+
+.navbar-brand{
+    font-size:24px;
+    font-weight:700;
+    text-decoration:none;
+}
+
+.navbar .btn{
+    transition:0.3s;
+    border-radius:10px;
+}
+
+.navbar .btn:hover{
+    transform:translateY(-2px);
+}
+
+.nav-active{
+    background:#2563eb !important;
+    color:white !important;
+    border-color:#2563eb !important;
+    box-shadow:0 0 15px rgba(37,99,235,.4);
+}

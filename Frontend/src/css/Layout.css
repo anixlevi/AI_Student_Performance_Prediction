@@ -1,0 +1,61 @@
+.app-layout{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:#f1f5f9;
+
+}
+
+.main-content{
+
+    margin-left:260px;
+
+    width:calc(100% - 260px);
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.page-content{
+
+    padding:30px;
+
+    min-height:calc(100vh - 80px);
+
+    background:#f8fafc;
+
+}
+
+@media(max-width:900px){
+
+    .main-content{
+
+        margin-left:220px;
+
+        width:calc(100% - 220px);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .main-content{
+
+        margin-left:80px;
+
+        width:calc(100% - 80px);
+
+    }
+
+    .page-content{
+
+        padding:20px;
+
+    }
+
+}

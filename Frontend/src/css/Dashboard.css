@@ -1,0 +1,590 @@
+/* =================================
+        AI DASHBOARD THEME
+================================= */
+
+
+.dashboard{
+
+    min-height:100vh;
+
+    padding:40px 60px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #020617,
+        #0f172a,
+        #1e3a8a
+    );
+
+    color:white;
+
+}
+
+
+
+
+
+/* ==============================
+        HERO
+============================== */
+
+
+.dashboard .hero{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.dashboard .hero h1{
+
+
+    font-size:45px;
+
+    font-weight:800;
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #38bdf8,
+        #a855f7
+    );
+
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+
+}
+
+
+
+.subtitle{
+
+    color:#cbd5e1;
+
+    font-size:18px;
+
+}
+
+
+
+
+
+/* ==============================
+        STAT CARDS
+============================== */
+
+
+.cards{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(4,1fr);
+
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+.card{
+
+
+    padding:25px;
+
+
+    border-radius:25px;
+
+
+    background:
+
+    rgba(255,255,255,0.08);
+
+
+    border:
+
+    1px solid rgba(255,255,255,0.15);
+
+
+    backdrop-filter:blur(15px);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.card:hover{
+
+
+    transform:translateY(-8px);
+
+
+}
+
+
+
+
+
+.card h3{
+
+
+    color:#e2e8f0;
+
+
+}
+
+
+
+.card h2{
+
+
+    font-size:35px;
+
+
+}
+
+
+
+.icon{
+
+
+    font-size:35px;
+
+    color:#38bdf8;
+
+
+}
+
+
+
+
+/* remove old colors */
+
+.blue,
+.green,
+.purple,
+.orange,
+.dark,
+.sky{
+
+
+    background:
+
+    rgba(255,255,255,0.08);
+
+
+}
+
+
+
+
+
+
+/* ==============================
+        SECOND ROW
+============================== */
+
+
+.second-row{
+
+
+    margin-top:25px;
+
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+
+}
+
+
+
+
+
+
+/* ==============================
+        CHART SECTION
+============================== */
+
+
+
+.chart-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+
+    gap:30px;
+
+
+    margin-top:40px;
+
+
+}
+
+
+
+
+
+
+.chart-card{
+
+
+    height:350px;
+
+
+    padding:25px;
+
+
+    border-radius:25px;
+
+
+    background:
+
+    rgba(255,255,255,0.08);
+
+
+    border:
+
+    1px solid rgba(255,255,255,0.15);
+
+
+    backdrop-filter:blur(15px);
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+.chart-card canvas{
+
+
+    max-height:240px !important;
+
+
+}
+
+
+
+
+
+.small-chart{
+
+
+    height:350px;
+
+
+}
+
+
+
+
+
+
+/* ==============================
+        RECENT STUDENTS
+============================== */
+
+
+
+.recent{
+
+
+    margin-top:40px;
+
+
+    padding:30px;
+
+
+    border-radius:25px;
+
+
+    background:
+
+    rgba(255,255,255,0.08);
+
+
+    backdrop-filter:blur(15px);
+
+
+}
+
+
+
+.recent-header{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+}
+
+
+
+
+
+.student-box{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    padding:20px;
+
+
+    margin-top:15px;
+
+
+    border-radius:20px;
+
+
+    background:
+
+    rgba(255,255,255,0.1);
+
+
+}
+
+
+
+
+.avatar{
+
+
+    height:45px;
+
+
+    width:45px;
+
+
+    border-radius:50%;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    background:#2563eb;
+
+
+    font-size:20px;
+
+
+}
+
+
+
+
+
+
+/* ==============================
+        INSIGHTS
+============================== */
+
+
+
+.insight-section{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    1fr 1fr;
+
+
+    gap:30px;
+
+
+    margin-top:40px;
+
+
+}
+
+
+
+
+.insight-card,
+.top-card{
+
+
+    padding:30px;
+
+
+    border-radius:25px;
+
+
+    background:
+
+    rgba(255,255,255,0.08);
+
+
+    backdrop-filter:blur(15px);
+
+
+}
+
+
+
+
+
+.insight-card li{
+
+
+    margin:15px 0;
+
+
+}
+
+
+
+
+
+
+.top-card h1{
+
+
+    color:#38bdf8;
+
+
+}
+
+
+
+
+
+
+
+/* ==============================
+        FOOTER
+============================== */
+
+
+
+.footer-dashboard{
+
+
+    text-align:center;
+
+
+    margin-top:40px;
+
+
+    padding:20px;
+
+
+    color:#cbd5e1;
+
+
+}
+
+
+
+
+
+
+/* ==============================
+        RESPONSIVE
+============================== */
+
+
+
+@media(max-width:900px){
+
+
+.dashboard{
+
+    padding:20px;
+
+}
+
+
+
+.cards{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+.chart-grid{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+.second-row{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+.insight-section{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+}
