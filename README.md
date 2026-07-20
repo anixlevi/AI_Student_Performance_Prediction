@@ -356,3 +356,46 @@ http://127.0.0.1:8000/redoc
   "predicted_marks": 84.23
 }
 ```
+---
+# log in screenshorts
+
+## login
+
+![ login ](screenshorts/login.png)
+
+---
+# 📸 Project Screenshots
+
+## 🏠 Home Page
+
+![Home Page](screenshots/Home.png)
+
+---
+
+## 👨‍🎓 Student Registration
+
+![Register](screenshots/Register.png)
+
+---
+
+## 📊 Dashboard
+
+![Dashboard](screenshots/Dashboard.png)
+
+---
+
+## 🤖 Prediction Page
+
+![Prediction](screenshots/Prediction.png)
+
+---
+
+## 👥 Student Management
+
+![Students](screenshots/Students.png)
+
+---
+
+## 📄 Prediction Report
+
+![Report](screenshots/Report.png)
