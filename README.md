@@ -28,3 +28,40 @@ This project demonstrates the integration of Machine Learning with a React front
 - ⚡ FastAPI REST API Integration
 - 🗄️ MySQL Database Integration
 - 🌐 Modern React + Vite Frontend
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+- React.js
+- Vite
+- Bootstrap 5
+- CSS3
+- Axios
+- React Router DOM
+- Recharts
+
+## Backend
+- FastAPI
+- SQLAlchemy
+- Pydantic
+- Uvicorn
+
+## Machine Learning
+- Python
+- Scikit-learn
+- Random Forest Regressor
+- Pandas
+- NumPy
+- Joblib
+
+## Database
+- MySQL
+
+## Version Control
+- Git
+- GitHub
+
+## Development Tools
+- Visual Studio Code
+- Postman
