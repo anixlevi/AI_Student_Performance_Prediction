@@ -13,3 +13,18 @@ The system collects academic information such as attendance, study hours, previo
 The application also includes a modern dashboard for student registration, data management, prediction analysis, charts, and downloadable reports.
 
 This project demonstrates the integration of Machine Learning with a React frontend, FastAPI backend, and MySQL database to build a real-world educational analytics platform.
+---
+
+## ✨ Features
+
+- 👨‍🎓 Student Registration and Management
+- 🤖 AI-Based Student Performance Prediction
+- 📊 Interactive Dashboard with Charts
+- 📈 Student Performance Analytics
+- 📋 Student Records Management
+- 📄 Downloadable Prediction Reports
+- 🔍 Search and Filter Students
+- 💻 Responsive User Interface
+- ⚡ FastAPI REST API Integration
+- 🗄️ MySQL Database Integration
+- 🌐 Modern React + Vite Frontend
