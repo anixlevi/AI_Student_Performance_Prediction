@@ -306,3 +306,53 @@ FastAPI Documentation:
 ```text
 http://127.0.0.1:8000/docs
 ```
+---
+
+# 📡 API Endpoints
+
+The backend is built using **FastAPI** and provides RESTful APIs for managing students and predicting academic performance.
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/register` | Register a new student |
+| GET | `/students` | Retrieve all registered students |
+| GET | `/student/{id}` | Get details of a specific student |
+| POST | `/predict` | Predict student final marks using the AI model |
+| GET | `/download-report/{student_id}` | Download the student's prediction report |
+
+## 🔍 API Documentation
+
+FastAPI automatically generates interactive API documentation.
+
+### Swagger UI
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+### ReDoc
+
+```text
+http://127.0.0.1:8000/redoc
+```
+
+## 📥 Example Prediction Request
+
+```json
+{
+  "age": 20,
+  "attendance": 92,
+  "study_hours": 5,
+  "previous_marks": 81,
+  "assignment_marks": 85,
+  "internal_marks": 78
+}
+```
+
+## 📤 Example Prediction Response
+
+```json
+{
+  "predicted_marks": 84.23
+}
+```
