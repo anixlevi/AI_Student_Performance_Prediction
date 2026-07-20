@@ -95,3 +95,48 @@ AI_Student_Performance_Prediction/
 │
 └── README.md
 ```
+---
+
+# 🤖 Machine Learning Model
+
+This project uses the **Random Forest Regressor** algorithm from **Scikit-learn** to predict students' final academic performance based on their academic records.
+
+## Input Features
+
+The model is trained using the following student attributes:
+
+- Age
+- Attendance (%)
+- Study Hours
+- Previous Marks
+- Assignment Marks
+- Internal Marks
+
+## Output
+
+The trained model predicts the student's **Expected Final Marks**.
+
+## Model Workflow
+
+1. Load the student dataset.
+2. Preprocess and clean the data.
+3. Select input features and target variable.
+4. Train the Random Forest Regressor model.
+5. Save the trained model using Joblib.
+6. Load the model in the FastAPI backend.
+7. Generate predictions for new student records.
+
+## Libraries Used
+
+- Scikit-learn
+- Pandas
+- NumPy
+- Joblib
+
+## Why Random Forest?
+
+- High prediction accuracy
+- Handles non-linear relationships
+- Reduces overfitting
+- Works well with structured datasets
+- Provides stable and reliable predictions
