@@ -1,9 +1,9 @@
 # ===========================
 # React
 # ===========================
-Frontend/node_modules/
-Frontend/dist/
-Frontend/.vite/
+node_modules/
+dist/
+.vite/
 
 # ===========================
 # Python
