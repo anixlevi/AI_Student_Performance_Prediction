@@ -357,18 +357,17 @@ http://127.0.0.1:8000/redoc
 }
 ```
 ---
-# log in screenshorts
+# 🔐 Login
 
-## login
-
-![ login ](screenshots/login.png)
+![Login](screenshots/login.png)
 
 ---
+
 # 📸 Project Screenshots
 
 ## 🏠 Home Page
 
-![Home Page](screenshots/Home.png)
+![Home](screenshots/Home.png)
 
 ---
 
@@ -392,7 +391,7 @@ http://127.0.0.1:8000/redoc
 
 ## 👥 Student Management
 
-![Students](screenshots/Students.png)
+![Students](screenshots/Student.png)
 
 ---
 
