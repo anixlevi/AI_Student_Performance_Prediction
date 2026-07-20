@@ -8,11 +8,11 @@ import numpy as np
 
 
 # Database
-from database.database import engine
+from database.database import engine, SessionLocal
 
 # Models
 from models.base import Base
-import models.student
+from models.student import Student
 
 
 # Routes
@@ -62,21 +62,14 @@ app.add_middleware(
 
 
 
+
 # Prediction Schema
 
 class PredictionInput(BaseModel):
 
-    age: int
+    student_id:int
 
-    attendance: float
 
-    study_hours: float
-
-    previous_marks: float
-
-    assignment_marks: float
-
-    internal_marks: float
 
 
 
@@ -87,12 +80,18 @@ app.include_router(auth_router)
 
 
 
+
+
 @app.get("/")
 def home():
 
     return {
+
         "message":"Backend Running Successfully"
+
     }
+
+
 
 
 
@@ -103,25 +102,115 @@ def predict(data: PredictionInput):
     print("Predict API Hit")
 
 
+
+    db = SessionLocal()
+
+
+
+    student = db.query(Student).filter(
+
+        Student.student_id == data.student_id
+
+    ).first()
+
+
+
+    if not student:
+
+
+        db.close()
+
+
+        return {
+
+            "error":"Student not found"
+
+        }
+
+
+
     input_data = np.array(
-        [
-            [
-                data.age,
-                data.attendance,
-                data.study_hours,
-                data.previous_marks,
-                data.assignment_marks,
-                data.internal_marks
-            ]
-        ]
+
+        [[
+
+            student.age,
+
+            student.attendance,
+
+            student.study_hours,
+
+            student.previous_marks,
+
+            student.assignment_marks,
+
+            student.internal_marks
+
+        ]]
+
     )
+
 
 
     prediction = model.predict(input_data)
 
 
+
+    marks = round(
+
+        float(prediction[0]),
+
+        2
+
+    )
+
+
+
+
+    if marks >= 90:
+
+
+        performance = "Excellent 🟢"
+
+
+
+    elif marks >= 75:
+
+
+        performance = "Good 🔵"
+
+
+
+    elif marks >= 50:
+
+
+        performance = "Average 🟡"
+
+
+
+    else:
+
+
+        performance = "Need Improvement 🔴"
+
+
+
+
+
+    db.close()
+
+
+
+
     return {
 
-        "predicted_score": float(prediction[0])
+
+        "student_name":student.name,
+
+
+        "predicted_marks":marks,
+
+
+        "performance":performance
+
 
     }
