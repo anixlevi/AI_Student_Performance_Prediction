@@ -415,3 +415,18 @@ The AI Student Performance Prediction System can be enhanced with several advanc
 - 📚 Personalized learning recommendations based on AI predictions.
 - 📈 Real-time performance monitoring dashboard.
 - 🌍 Multi-language support for wider accessibility.
+---
+
+# 👨‍💻 Author
+
+**Aniket Singh**
+
+🎓 Master of Computer Applications (MCA)
+
+💡 Passionate about Artificial Intelligence, Machine Learning, and Full Stack Web Development.
+
+## 📬 Connect with Me
+
+- GitHub: [(https://github.com/anixlevi/AI_Student_Performance_Prediction)]
+- LinkedIn: [(https://www.linkedin.com/in/aniket-singh-439819389/)]
+- Email: an1ket0s1ngh000@gmail.com
