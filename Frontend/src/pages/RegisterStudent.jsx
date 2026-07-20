@@ -29,7 +29,7 @@ function RegisterStudent() {
 
             // Register Student
             const registerResponse = await axios.post(
-                "http://127.0.0.1:8000/register",
+                `${import.meta.env.VITE_API_URL}/register`,
                 {
                     name: student.name,
                     age: Number(student.age),
@@ -44,7 +44,7 @@ function RegisterStudent() {
 
             // Predict Marks Automatically
             const predictResponse = await axios.post(
-                "http://127.0.0.1:8000/predict",
+                `${import.meta.env.VITE_API_URL}/predict`,
                 {
                     student_id: studentId,
                     age: Number(student.age),

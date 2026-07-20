@@ -1,32 +1,25 @@
 import { useState } from "react";
 import API from "../api/axios";
-import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
+import "../css/login.css";
 
-
-function Login(){
+function Login() {
 
     const navigate = useNavigate();
 
-    const [username,setUsername] = useState("");
-    const [password,setPassword] = useState("");
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
 
-
-    const handleLogin = async(e)=>{
+    const handleLogin = async (e) => {
 
         e.preventDefault();
 
+        try {
 
-        try{
-
-            const response = await API.post(
-                "/login",
-                {
-                    username,
-                    password
-                }
-            );
-
+            const response = await API.post("/login", {
+                username,
+                password
+            });
 
             alert("Login Successful");
 
@@ -35,15 +28,10 @@ function Login(){
                 response.data.username
             );
 
-
-            navigate("/")
-
-
-            console.log(response.data);
-
+            navigate("/home");
 
         }
-        catch(error){
+        catch (error) {
 
             console.log(error);
 
@@ -53,74 +41,115 @@ function Login(){
 
     };
 
+    return (
 
-    return(
+        <div className="login-page">
 
-        <>
+            {/* Left Side */}
+            <div className="login-left">
 
-        <Navbar/>
+                <div className="brand">
 
-        <div className="container mt-5">
+                    <h1>🎓 AI Student Performance Prediction</h1>
 
-            <div className="card shadow p-4">
+                    <p>
+                        Predict Student Performance using Artificial Intelligence
+                        and Machine Learning.
+                    </p>
 
+                </div>
 
-                <h2 className="text-center">
-                    🔐 Login
-                </h2>
+                <div className="feature-box">
 
+                    <div className="feature-card">
+                        🤖 AI Powered Prediction
+                    </div>
 
-                <form onSubmit={handleLogin}>
+                    <div className="feature-card">
+                        📊 Real-Time Dashboard
+                    </div>
 
+                    <div className="feature-card">
+                        👨‍🎓 Student Management
+                    </div>
 
-                    <input
+                    <div className="feature-card">
+                        🔒 Secure Authentication
+                    </div>
 
-                    className="form-control mb-3"
+                </div>
 
-                    placeholder="Username"
+            </div>
 
-                    value={username}
+            {/* Right Side */}
 
-                    onChange={(e)=>setUsername(e.target.value)}
+            <div className="login-right">
 
-                    />
+                <div className="login-card">
 
+                    <h2>Welcome Back 👋</h2>
 
-                    <input
+                    <p className="login-subtitle">
+                        Login to continue using the AI Student Performance Prediction System
+                    </p>
 
-                    className="form-control mb-3"
+                    <form onSubmit={handleLogin}>
 
-                    type="password"
+                        <input
+                            type="text"
+                            placeholder="Username"
+                            className="login-input"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                        />
 
-                    placeholder="Password"
+                        <input
+                            type="password"
+                            placeholder="Password"
+                            className="login-input"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
 
-                    value={password}
+                        <div className="login-options">
 
-                    onChange={(e)=>setPassword(e.target.value)}
+                            <label>
+                                <input type="checkbox" /> Remember Me
+                            </label>
 
-                    />
+                            <a href="#">
+                                Forgot Password?
+                            </a>
 
+                        </div>
 
-                    <button className="btn btn-success w-100">
+                        <button
+                            type="submit"
+                            className="login-btn"
+                        >
+                            🔐 Login
+                        </button>
 
-                        Login
+                    </form>
 
-                    </button>
+                    <div className="register-link">
 
+                        Don't have an account?
 
-                </form>
+                        <span>
+                            Register Now
+                        </span>
 
+                    </div>
+
+                </div>
 
             </div>
 
         </div>
 
-
-        </>
-
-    )
+    );
 
 }
-
 
 export default Login;

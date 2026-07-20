@@ -1,0 +1,610 @@
+/* ===============================
+   TOKENS
+================================ */
+
+:root{
+    --ink:#0f172a;
+    --muted:#64748b;
+    --line:#e5e7eb;
+    --accent:#4338ca;
+    --accent-soft:#eef2ff;
+    --surface:#ffffff;
+    --bg:#f8fafc;
+}
+
+
+/* ===============================
+   RESULT PAGE
+================================ */
+
+.result-page{
+
+    min-height:100vh;
+
+    padding:60px 24px;
+
+    background:var(--bg);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    box-sizing:border-box;
+
+}
+
+
+
+/* ===============================
+   MAIN RESULT CARD
+================================ */
+
+.result-card{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:680px;
+
+    background:var(--surface);
+
+    padding:44px 48px;
+
+    border-radius:20px;
+
+    box-shadow:0 1px 2px rgba(15,23,42,0.04), 0 20px 40px rgba(15,23,42,0.08);
+
+    border:1px solid var(--line);
+
+    box-sizing:border-box;
+
+}
+
+
+
+/* ===============================
+   CLOSE BUTTON
+================================ */
+
+.close-btn{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    width:34px;
+
+    height:34px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:var(--bg);
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    cursor:pointer;
+
+    transition:background 0.2s ease, color 0.2s ease;
+
+}
+
+
+.close-btn:hover{
+
+    background:#e2e8f0;
+
+    color:var(--ink);
+
+}
+
+
+
+/* ===============================
+   HEADER
+================================ */
+
+
+.result-header{
+
+    text-align:center;
+
+    margin-bottom:32px;
+
+}
+
+
+.result-title{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-bottom:6px;
+
+}
+
+
+.result-icon{
+
+    width:26px;
+
+    height:26px;
+
+    flex-shrink:0;
+
+    color:var(--accent);
+
+}
+
+
+.result-header h1{
+
+    font-size:24px;
+
+    font-weight:800;
+
+    letter-spacing:-0.01em;
+
+    margin:0;
+
+    background:linear-gradient(90deg,#4338ca,#0891b2);
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+
+}
+
+
+
+.result-header p{
+
+    color:var(--muted);
+
+    font-size:14.5px;
+
+    margin:0;
+
+}
+
+
+
+/* ===============================
+   STUDENT INFO
+================================ */
+
+
+.result-info{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:14px;
+
+    margin-bottom:16px;
+
+}
+
+
+
+.info-box{
+
+    background:var(--bg);
+
+    padding:16px;
+
+    border-radius:14px;
+
+    text-align:center;
+
+    border:1px solid var(--line);
+
+    border-top:3px solid #c7d2fe;
+
+}
+
+
+.result-info .info-box:nth-child(2){
+
+    border-top-color:#a5f3fc;
+
+}
+
+
+
+.info-box span{
+
+    color:var(--muted);
+
+    font-size:12.5px;
+
+}
+
+
+
+.info-box h3{
+
+    margin:6px 0 0;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    color:var(--ink);
+
+}
+
+
+
+/* ===============================
+   MARKS BOX
+================================ */
+
+
+.marks-box{
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#eef2ff,#ecfeff);
+
+    padding:26px 20px;
+
+    border-radius:16px;
+
+    margin-bottom:16px;
+
+    border:1px solid #e0e7ff;
+
+}
+
+
+.marks-box span{
+
+    color:var(--accent);
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:0.06em;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.marks-box h1{
+
+    font-size:46px;
+
+    font-weight:800;
+
+    margin:6px 0 2px;
+
+    background:linear-gradient(90deg,#4338ca,#0891b2);
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+
+}
+
+
+
+.marks-box p{
+
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:13.5px;
+
+}
+
+
+
+/* ===============================
+   STATUS
+================================ */
+
+
+.status-box{
+
+    text-align:center;
+
+    margin-bottom:16px;
+
+}
+
+
+.status-box h2{
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:0.06em;
+
+    text-transform:uppercase;
+
+    color:var(--muted);
+
+    margin:0 0 10px;
+
+}
+
+
+.status-pill{
+
+    display:inline-block;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    padding:8px 22px;
+
+    border-radius:999px;
+
+    margin:0;
+
+}
+
+
+.status-excellent{ background:#dcfce7; color:#15803d; }
+.status-good{ background:#dbeafe; color:#1d4ed8; }
+.status-average{ background:#fef9c3; color:#a16207; }
+.status-low{ background:#fee2e2; color:#b91c1c; }
+
+
+
+/* ===============================
+   SUGGESTION
+================================ */
+
+
+.suggestion-box{
+
+    background:#fffbeb;
+
+    padding:18px 22px;
+
+    border-radius:14px;
+
+    margin-bottom:8px;
+
+    border:1px solid #fde68a;
+
+    border-left:3px solid #f59e0b;
+
+}
+
+
+.suggestion-box h2{
+
+    font-size:14px;
+
+    font-weight:700;
+
+    color:#b45309;
+
+    margin:0 0 6px;
+
+}
+
+
+
+.suggestion-box p{
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    margin:0;
+
+}
+
+
+
+/* ===============================
+   DOWNLOAD SECTION
+   (its own row, centered under the card)
+================================ */
+
+
+.download-section{
+
+    width:100%;
+
+    max-width:680px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+.download-btn{
+
+    padding:13px 32px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    background:#16a34a;
+
+    color:white;
+
+    transition:background 0.2s ease, transform 0.15s ease;
+
+}
+
+
+.download-btn:hover{
+
+    background:#15803d;
+
+    transform:translateY(-2px);
+
+}
+
+
+.download-btn:active{
+
+    transform:scale(0.98);
+
+}
+
+
+
+/* ===============================
+   NO DATA FALLBACK
+================================ */
+
+.prediction-error{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:18px;
+
+    background:var(--bg);
+
+    text-align:center;
+
+    padding:24px;
+
+}
+
+
+.prediction-error h2{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:var(--ink);
+
+    margin:0;
+
+}
+
+
+.prediction-error button{
+
+    padding:12px 26px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:var(--accent);
+
+    color:white;
+
+    font-size:14.5px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:background 0.2s ease;
+
+}
+
+
+.prediction-error button:hover{
+
+    background:#3730a3;
+
+}
+
+
+
+/* ===============================
+   MOBILE
+================================ */
+
+
+@media(max-width:640px){
+
+
+.result-page{
+
+    padding:32px 16px;
+
+}
+
+
+
+.result-card{
+
+    padding:30px 24px;
+
+}
+
+
+
+.result-info{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.marks-box h1{
+
+    font-size:38px;
+
+}
+
+
+}

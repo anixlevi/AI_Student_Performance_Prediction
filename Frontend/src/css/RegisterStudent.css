@@ -191,3 +191,136 @@
     text-align:center;
 
 }
+/* ===============================
+   CLOSE BUTTON
+================================ */
+
+
+.close-btn{
+
+    position:absolute;
+
+    top:25px;
+
+    right:35px;
+
+
+    width:45px;
+
+    height:45px;
+
+
+    border-radius:50%;
+
+
+    border:none;
+
+
+    background:#fee2e2;
+
+
+    color:#dc2626;
+
+
+    font-size:25px;
+
+
+    font-weight:700;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+}
+
+
+
+.close-btn:hover{
+
+    background:#dc2626;
+
+    color:white;
+
+    transform:rotate(90deg);
+
+}
+
+
+
+
+/* ===============================
+   POSITION FIX
+================================ */
+
+
+.result-page{
+
+    position:relative;
+
+}
+
+
+
+
+/* ===============================
+   DOWNLOAD CENTER
+================================ */
+
+
+.download-section{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:25px;
+
+}
+
+
+
+.download-btn{
+
+    padding:15px 45px;
+
+    border:none;
+
+    border-radius:15px;
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #16a34a,
+        #22c55e
+    );
+
+
+    color:white;
+
+
+    font-size:17px;
+
+    font-weight:700;
+
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.download-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+    0 12px 25px rgba(22,163,74,.3);
+
+}

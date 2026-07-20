@@ -1,7 +1,6 @@
-/* =================================
-        AI DASHBOARD THEME
-================================= */
-
+/* =========================================
+        PROFESSIONAL LIGHT DASHBOARD
+========================================= */
 
 .dashboard{
 
@@ -9,175 +8,125 @@
 
     padding:40px 60px;
 
-    background:
-    linear-gradient(
-        135deg,
-        #020617,
-        #0f172a,
-        #1e3a8a
-    );
+    background:#f8fafc;
 
-    color:white;
+    color:#1e293b;
 
 }
 
 
-
-
-
-/* ==============================
-        HERO
-============================== */
-
+/* =========================================
+                HERO
+========================================= */
 
 .dashboard .hero{
 
     text-align:center;
 
-    margin-bottom:40px;
+    margin-bottom:45px;
 
 }
-
-
 
 .dashboard .hero h1{
 
+    font-size:42px;
 
-    font-size:45px;
+    font-weight:700;
 
-    font-weight:800;
+    color:#1e293b;
 
-
-    background:
-
-    linear-gradient(
-        90deg,
-        #38bdf8,
-        #a855f7
-    );
-
-
-    -webkit-background-clip:text;
-
-    color:transparent;
-
+    margin-bottom:10px;
 
 }
-
-
 
 .subtitle{
 
-    color:#cbd5e1;
+    font-size:17px;
 
-    font-size:18px;
+    color:#64748b;
 
 }
 
 
-
-
-
-/* ==============================
-        STAT CARDS
-============================== */
-
+/* =========================================
+            DASHBOARD CARDS
+========================================= */
 
 .cards{
 
-
     display:grid;
 
+    grid-template-columns:repeat(4,1fr);
 
-    grid-template-columns:
-
-    repeat(4,1fr);
-
-
-    gap:25px;
-
+    gap:22px;
 
 }
 
-
-
-
+/* Main Card */
 
 .card{
 
+    background:white;
 
-    padding:25px;
+    border:1px solid #e2e8f0;
 
+    border-radius:18px;
 
-    border-radius:25px;
+    padding:24px;
 
-
-    background:
-
-    rgba(255,255,255,0.08);
-
-
-    border:
-
-    1px solid rgba(255,255,255,0.15);
-
-
-    backdrop-filter:blur(15px);
-
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
 
     transition:.3s;
 
-
 }
-
-
 
 .card:hover{
 
+    transform:translateY(-6px);
 
-    transform:translateY(-8px);
-
+    box-shadow:0 15px 35px rgba(37,99,235,.10);
 
 }
 
-
-
-
+/* Card Title */
 
 .card h3{
 
+    font-size:16px;
 
-    color:#e2e8f0;
+    color:#64748b;
 
+    margin-bottom:12px;
+
+    font-weight:600;
 
 }
 
-
+/* Card Value */
 
 .card h2{
 
+    font-size:34px;
 
-    font-size:35px;
+    color:#1e293b;
 
+    font-weight:700;
 
 }
 
-
+/* Icon */
 
 .icon{
 
+    font-size:34px;
 
-    font-size:35px;
+    color:#2563eb;
 
-    color:#38bdf8;
-
+    margin-bottom:15px;
 
 }
 
-
-
-
-/* remove old colors */
+/* Remove old colors */
 
 .blue,
 .green,
@@ -186,358 +135,370 @@
 .dark,
 .sky{
 
-
-    background:
-
-    rgba(255,255,255,0.08);
-
+    background:white;
 
 }
 
-
-
-
-
-
-/* ==============================
+/* =========================================
         SECOND ROW
-============================== */
-
+========================================= */
 
 .second-row{
 
+    margin-top:24px;
 
-    margin-top:25px;
+    display:grid;
 
+    grid-template-columns:repeat(2,1fr);
 
-    grid-template-columns:
-
-    repeat(2,1fr);
-
+    gap:22px;
 
 }
-
-
-
-
-
-
-/* ==============================
-        CHART SECTION
-============================== */
-
-
+/* =========================================
+            CHART SECTION
+========================================= */
 
 .chart-grid{
 
-
     display:grid;
 
+    grid-template-columns:repeat(2,1fr);
 
-    grid-template-columns:
+    gap:25px;
 
-    repeat(2,1fr);
-
-
-    gap:30px;
-
-
-    margin-top:40px;
-
+    margin-top:35px;
 
 }
-
-
-
-
-
 
 .chart-card{
 
+    background:#ffffff;
 
-    height:350px;
+    border:1px solid #e2e8f0;
 
+    border-radius:18px;
 
-    padding:25px;
+    padding:24px;
 
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
 
-    border-radius:25px;
+    transition:.3s;
 
-
-    background:
-
-    rgba(255,255,255,0.08);
-
-
-    border:
-
-    1px solid rgba(255,255,255,0.15);
-
-
-    backdrop-filter:blur(15px);
-
-
-    overflow:hidden;
-
+    height:380px;
 
 }
 
+.chart-card:hover{
 
+    transform:translateY(-5px);
 
-
-.chart-card canvas{
-
-
-    max-height:240px !important;
-
+    box-shadow:0 15px 35px rgba(37,99,235,.10);
 
 }
 
+.chart-card h3{
 
-
-
-
-.small-chart{
-
-
-    height:350px;
-
-
-}
-
-
-
-
-
-
-/* ==============================
-        RECENT STUDENTS
-============================== */
-
-
-
-.recent{
-
-
-    margin-top:40px;
-
-
-    padding:30px;
-
-
-    border-radius:25px;
-
-
-    background:
-
-    rgba(255,255,255,0.08);
-
-
-    backdrop-filter:blur(15px);
-
-
-}
-
-
-
-.recent-header{
-
-
-    display:flex;
-
-
-    justify-content:space-between;
-
-
-    align-items:center;
-
-
-}
-
-
-
-
-
-.student-box{
-
-
-    display:flex;
-
-
-    justify-content:space-between;
-
-
-    align-items:center;
-
-
-    padding:20px;
-
-
-    margin-top:15px;
-
-
-    border-radius:20px;
-
-
-    background:
-
-    rgba(255,255,255,0.1);
-
-
-}
-
-
-
-
-.avatar{
-
-
-    height:45px;
-
-
-    width:45px;
-
-
-    border-radius:50%;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    justify-content:center;
-
-
-    background:#2563eb;
-
+    color:#1e293b;
 
     font-size:20px;
 
+    margin-bottom:20px;
+
+    font-weight:600;
 
 }
 
+.chart-card canvas{
 
+    max-height:270px !important;
 
+}
 
+.small-chart{
 
+    height:380px;
 
-/* ==============================
-        INSIGHTS
-============================== */
+}
 
+/* =========================================
+            RECENT STUDENTS
+========================================= */
 
+.recent{
+
+    margin-top:35px;
+
+    background:#ffffff;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+
+}
+
+.recent-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.recent-header h2{
+
+    color:#1e293b;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+.student-box{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:16px 20px;
+
+    margin-top:12px;
+
+    border-radius:14px;
+
+    background:#f8fafc;
+
+    border:1px solid #e2e8f0;
+
+    transition:.3s;
+
+}
+
+.student-box:hover{
+
+    background:#eff6ff;
+
+    transform:translateX(5px);
+
+}
+
+.avatar{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-weight:bold;
+
+    font-size:18px;
+
+}
+
+.student-box h4{
+
+    color:#1e293b;
+
+    margin-bottom:4px;
+
+}
+
+.student-box p{
+
+    color:#64748b;
+
+    font-size:14px;
+
+}
+
+.student-score{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#2563eb;
+
+}
+/* =========================================
+            INSIGHTS SECTION
+========================================= */
 
 .insight-section{
 
-
     display:grid;
 
+    grid-template-columns:1fr 1fr;
 
-    grid-template-columns:
+    gap:25px;
 
-    1fr 1fr;
-
-
-    gap:30px;
-
-
-    margin-top:40px;
-
+    margin-top:35px;
 
 }
-
-
-
 
 .insight-card,
 .top-card{
 
+    background:#ffffff;
 
-    padding:30px;
+    border:1px solid #e2e8f0;
 
+    border-radius:18px;
 
-    border-radius:25px;
+    padding:25px;
 
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
 
-    background:
-
-    rgba(255,255,255,0.08);
-
-
-    backdrop-filter:blur(15px);
-
+    transition:.3s;
 
 }
 
+.insight-card:hover,
+.top-card:hover{
 
+    transform:translateY(-5px);
 
+    box-shadow:0 15px 35px rgba(37,99,235,.10);
 
+}
+
+.insight-card h2,
+.top-card h2{
+
+    font-size:24px;
+
+    color:#1e293b;
+
+    margin-bottom:18px;
+
+}
+
+.insight-card ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
 
 .insight-card li{
 
+    padding:12px 0;
 
-    margin:15px 0;
+    border-bottom:1px solid #e2e8f0;
 
+    color:#475569;
 
-}
-
-
-
-
-
-
-.top-card h1{
-
-
-    color:#38bdf8;
-
+    font-size:15px;
 
 }
 
+.insight-card li:last-child{
 
+    border-bottom:none;
 
+}
 
-
-
-
-/* ==============================
-        FOOTER
-============================== */
-
-
-
-.footer-dashboard{
-
+.top-card{
 
     text-align:center;
 
+}
 
-    margin-top:40px;
+.top-card h1{
 
+    font-size:58px;
 
-    padding:20px;
+    color:#2563eb;
 
+    margin:15px 0;
 
-    color:#cbd5e1;
-
+    font-weight:700;
 
 }
 
+.top-card p{
 
+    color:#64748b;
 
+    font-size:16px;
 
+}
 
+/* =========================================
+                FOOTER
+========================================= */
 
-/* ==============================
-        RESPONSIVE
-============================== */
+.footer-dashboard{
 
+    margin-top:40px;
 
+    padding:25px;
 
-@media(max-width:900px){
+    text-align:center;
 
+    color:#64748b;
+
+    font-size:15px;
+
+    border-top:1px solid #e2e8f0;
+
+}
+
+/* =========================================
+              RESPONSIVE
+========================================= */
+
+@media(max-width:1100px){
+
+.cards{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.chart-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.second-row{
+
+    grid-template-columns:1fr;
+
+}
+
+.insight-section{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
 
 .dashboard{
 
@@ -545,46 +506,82 @@
 
 }
 
+.dashboard .hero h1{
 
+    font-size:34px;
+
+}
+
+.subtitle{
+
+    font-size:15px;
+
+}
 
 .cards{
 
-
     grid-template-columns:1fr;
-
 
 }
 
+.chart-card{
 
-
-.chart-grid{
-
-
-    grid-template-columns:1fr;
-
+    height:auto;
 
 }
 
+.student-box{
 
+    flex-direction:column;
 
-.second-row{
+    align-items:flex-start;
 
-
-    grid-template-columns:1fr;
-
-
-}
-
-
-
-.insight-section{
-
-
-    grid-template-columns:1fr;
-
+    gap:12px;
 
 }
 
+.avatar{
 
+    margin-bottom:8px;
+
+}
+
+.top-card h1{
+
+    font-size:46px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.dashboard{
+
+    padding:15px;
+
+}
+
+.dashboard .hero{
+
+    margin-bottom:25px;
+
+}
+
+.dashboard .hero h1{
+
+    font-size:28px;
+
+}
+
+.chart-card,
+.card,
+.recent,
+.insight-card,
+.top-card{
+
+    padding:18px;
+
+}
 
 }

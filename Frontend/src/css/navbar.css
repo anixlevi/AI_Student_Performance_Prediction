@@ -1,26 +1,270 @@
+/* =====================================
+        PROFESSIONAL DARK NAVBAR
+====================================== */
+
 .navbar{
-    background:#111827 !important;
-    padding:14px 40px;
+
+    background:#0f172a !important;
+
+    padding:14px 45px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+
+    align-items:center;
+
 }
+
+
+/* ===============================
+   LOGO
+================================ */
 
 .navbar-brand{
-    font-size:24px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:19px;
+
     font-weight:700;
+
+    color:#ffffff !important;
+
     text-decoration:none;
+
+    letter-spacing:.2px;
+
+    transition:opacity .2s ease;
+
 }
+
+
+.navbar-brand:hover{
+
+    opacity:0.85;
+
+}
+
+
+.brand-icon{
+
+    width:28px;
+
+    height:28px;
+
+    flex-shrink:0;
+
+}
+
+
+/* ===============================
+   NAV LINKS WRAPPER
+================================ */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+
+/* ===============================
+   BUTTONS
+================================ */
 
 .navbar .btn{
-    transition:0.3s;
-    border-radius:10px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    background:transparent;
+
+    color:#94a3b8;
+
+    border:1px solid transparent;
+
+    border-radius:8px;
+
+    padding:8px 16px;
+
+    font-size:14.5px;
+
+    font-weight:500;
+
+    transition:background .2s ease, color .2s ease, border-color .2s ease;
+
 }
+
+
+.btn-icon{
+
+    width:16px;
+
+    height:16px;
+
+    flex-shrink:0;
+
+}
+
 
 .navbar .btn:hover{
-    transform:translateY(-2px);
+
+    background:rgba(255,255,255,.06);
+
+    color:#e2e8f0;
+
+    border-color:rgba(255,255,255,.08);
+
+    transform:none;
+
 }
 
+
+/* Active */
+
 .nav-active{
-    background:#2563eb !important;
-    color:white !important;
-    border-color:#2563eb !important;
-    box-shadow:0 0 15px rgba(37,99,235,.4);
+
+    background:linear-gradient(90deg,#4338ca,#0891b2) !important;
+
+    color:#ffffff !important;
+
+    border-color:transparent !important;
+
+}
+
+
+/* ===============================
+   USERNAME CHIP
+================================ */
+
+.user-chip{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    color:#cbd5e1;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+
+
+.user-chip svg{
+
+    width:16px;
+
+    height:16px;
+
+    color:#64748b;
+
+}
+
+
+/* ===============================
+   LOGOUT BUTTON
+================================ */
+
+.navbar .btn-danger{
+
+    background:#dc2626;
+
+    border:none;
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:8px;
+
+    font-size:14.5px;
+
+    font-weight:600;
+
+    transition:background .2s ease;
+
+}
+
+
+.navbar .btn-danger:hover{
+
+    background:#b91c1c;
+
+    transform:none;
+
+}
+
+
+/* ===============================
+   LOGIN BUTTON (guest state)
+================================ */
+
+.navbar .btn-success{
+
+    background:#16a34a;
+
+    border:none;
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+
+.navbar .btn-success:hover{
+
+    background:#15803d;
+
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media(max-width:900px){
+
+    .navbar{
+
+        flex-wrap:wrap;
+
+        padding:14px 20px;
+
+        gap:10px;
+
+    }
+
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        gap:6px;
+
+    }
+
+
+    .navbar .btn{
+
+        padding:7px 12px;
+
+        font-size:13.5px;
+
+    }
+
 }

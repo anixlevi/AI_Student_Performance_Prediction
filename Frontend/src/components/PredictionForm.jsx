@@ -260,7 +260,7 @@ function PredictionForm() {
 
         window.open(
 
-            `http://127.0.0.1:8000/download-report/${data.student_id}`,
+            `${import.meta.env.VITE_API_URL}/download-report/${data.student_id}`,
 
             "_blank"
 

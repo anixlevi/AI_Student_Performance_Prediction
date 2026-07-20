@@ -1,8 +1,7 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import ProtectedRoute from "./components/ProtectedRoute";
-
+import PredictionResult from "./pages/PredictionResult";
 
 import Home from "./pages/Home";
 import Register from "./pages/Register";
@@ -11,153 +10,87 @@ import Dashboard from "./pages/Dashboard";
 import Prediction from "./pages/Prediction";
 import Students from "./pages/Students";
 
-
-
-function App(){
-
-
-    return(
-
-
+function App() {
+    return (
         <BrowserRouter>
-
-
             <Routes>
 
-
-
-                {/* Landing Page */}
-
+                {/* Default Route */}
                 <Route
-
                     path="/"
-
-                    element={<Home/>}
-
+                    element={<Navigate to="/auth/login" replace />}
                 />
 
+                {/* Authentication */}
+                <Route
+                    path="/auth/login"
+                    element={<Login />}
+                />
 
-
+                {/* Home */}
+                <Route
+                    path="/home"
+                    element={
+                        <ProtectedRoute>
+                            <Home />
+                        </ProtectedRoute>
+                    }
+                />
 
                 {/* Student Registration */}
-
                 <Route
-
                     path="/register"
-
-                    element={<Register/>}
-
+                    element={
+                        <ProtectedRoute>
+                            <Register />
+                        </ProtectedRoute>
+                    }
                 />
 
-
-
-
-                {/* Login */}
-
+                {/* Dashboard */}
                 <Route
-
-                    path="/login"
-
-                    element={<Login/>}
-
-                />
-
-
-
-
-
-                {/* AI Dashboard */}
-
-                <Route
-
                     path="/dashboard"
-
                     element={
-
                         <ProtectedRoute>
-
-                            <Dashboard/>
-
+                            <Dashboard />
                         </ProtectedRoute>
-
                     }
-
                 />
 
-
-
-
-
-
-                {/* AI Prediction */}
-
+                {/* Prediction */}
                 <Route
-
                     path="/prediction"
-
                     element={
-
                         <ProtectedRoute>
-
-                            <Prediction/>
-
+                            <Prediction />
                         </ProtectedRoute>
-
                     }
-
+                />
+                <Route
+                    path="/prediction-result"
+                    element={<PredictionResult/>}
                 />
 
-
-
-
-
-
-                {/* Student Management */}
-
+                {/* Students */}
                 <Route
-
                     path="/students"
-
                     element={
-
                         <ProtectedRoute>
-
-                            <Students/>
-
+                            <Students />
                         </ProtectedRoute>
-
                     }
-
                 />
+                
 
-
-
-
-
-
-                {/* Wrong URL */}
-
+                {/* 404 */}
                 <Route
-
                     path="*"
-
-                    element={<Home/>}
-
+                    element={<Navigate to="/auth/login" replace />}
                 />
-
-
 
             </Routes>
-
-
         </BrowserRouter>
-
-
     );
-
-
 }
-
-
 
 export default App;
