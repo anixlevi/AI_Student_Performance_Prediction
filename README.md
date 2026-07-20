@@ -65,3 +65,33 @@ This project demonstrates the integration of Machine Learning with a React front
 ## Development Tools
 - Visual Studio Code
 - Postman
+---
+
+# 📁 Project Structure
+
+```text
+AI_Student_Performance_Prediction/
+│
+├── Backend/
+│   ├── main.py
+│   ├── database.py
+│   ├── models.py
+│   ├── schemas.py
+│   ├── requirements.txt
+│   └── ...
+│
+├── Frontend/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.js
+│
+├── Dataset/
+│   └── student_performance.csv
+│
+├── ML/
+│   ├── train.py
+│   └── student_model.pkl
+│
+└── README.md
+```
