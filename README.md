@@ -415,6 +415,16 @@ The AI Student Performance Prediction System can be enhanced with several advanc
 - 📈 Real-time performance monitoring dashboard.
 - 🌍 Multi-language support for wider accessibility.
 ---
+## 🔑 Demo Login Credentials
+
+Use the following demo credentials to access the application.
+
+| Username | Password         |
+| -------- | ---------------- |
+| **Anix** | **REDACTED** |
+
+> **Note:** These credentials are provided for demonstration and evaluation purposes only.
+---
 
 # 👨‍💻 Author
 
