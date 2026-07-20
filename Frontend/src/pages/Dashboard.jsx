@@ -225,7 +225,7 @@ return (
 
         <h1>
 
-            🎓 AI Student Performance Prediction System
+            AI Sƚυԃҽɳƚ Pҽɾϝσɾɱαɳƈҽ Pɾҽԃιƈƚισɳ Sყʂƚҽɱ DαʂԋႦσαɾԃ
 
         </h1>
 

@@ -1,5 +1,6 @@
 /* =========================================
         PROFESSIONAL LIGHT DASHBOARD
+        (Matched with Home Page Theme)
 ========================================= */
 
 .dashboard{
@@ -8,7 +9,7 @@
 
     padding:40px 60px;
 
-    background:#f8fafc;
+    background:linear-gradient(180deg,#f5f7ff 0%,#eef2ff 40%,#f8fafc 100%);
 
     color:#1e293b;
 
@@ -33,10 +34,29 @@
 
     font-weight:700;
 
-    color:#1e293b;
+    color:#1e1b4b;
 
     margin-bottom:10px;
 
+    letter-spacing:-1px;
+
+}
+
+.dashboard .hero h1 span{
+
+    background:linear-gradient(90deg,#4f46e5,#7c3aed,#2563eb);
+    background-size:200% auto;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+    animation:gradientShift 6s ease infinite;
+
+}
+
+@keyframes gradientShift{
+    0%{background-position:0% center;}
+    50%{background-position:100% center;}
+    100%{background-position:0% center;}
 }
 
 .subtitle{
@@ -66,15 +86,15 @@
 
 .card{
 
-    background:white;
+    background:linear-gradient(160deg,#ffffff 0%,#f5f7ff 100%);
 
-    border:1px solid #e2e8f0;
+    border:1px solid #e0e7ff;
 
-    border-radius:18px;
+    border-radius:20px;
 
     padding:24px;
 
-    box-shadow:0 8px 25px rgba(0,0,0,.06);
+    box-shadow:0 8px 25px rgba(79,70,229,.08);
 
     transition:.3s;
 
@@ -82,9 +102,11 @@
 
 .card:hover{
 
-    transform:translateY(-6px);
+    transform:translateY(-8px);
 
-    box-shadow:0 15px 35px rgba(37,99,235,.10);
+    box-shadow:0 15px 35px rgba(79,70,229,.15);
+
+    border-color:#c7d2fe;
 
 }
 
@@ -108,9 +130,12 @@
 
     font-size:34px;
 
-    color:#1e293b;
-
     font-weight:700;
+
+    background:linear-gradient(90deg,#4f46e5,#7c3aed);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
 
 }
 
@@ -120,9 +145,12 @@
 
     font-size:34px;
 
-    color:#2563eb;
-
     margin-bottom:15px;
+
+    background:linear-gradient(135deg,#4f46e5,#2563eb);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
 
 }
 
@@ -135,7 +163,7 @@
 .dark,
 .sky{
 
-    background:white;
+    background:linear-gradient(160deg,#ffffff 0%,#f5f7ff 100%);
 
 }
 
@@ -172,15 +200,15 @@
 
 .chart-card{
 
-    background:#ffffff;
+    background:linear-gradient(160deg,#ffffff 0%,#f5f7ff 100%);
 
-    border:1px solid #e2e8f0;
+    border:1px solid #e0e7ff;
 
-    border-radius:18px;
+    border-radius:20px;
 
     padding:24px;
 
-    box-shadow:0 8px 25px rgba(0,0,0,.06);
+    box-shadow:0 8px 25px rgba(79,70,229,.08);
 
     transition:.3s;
 
@@ -190,15 +218,17 @@
 
 .chart-card:hover{
 
-    transform:translateY(-5px);
+    transform:translateY(-6px);
 
-    box-shadow:0 15px 35px rgba(37,99,235,.10);
+    box-shadow:0 15px 35px rgba(79,70,229,.15);
+
+    border-color:#c7d2fe;
 
 }
 
 .chart-card h3{
 
-    color:#1e293b;
+    color:#312e81;
 
     font-size:20px;
 
@@ -228,15 +258,23 @@
 
     margin-top:35px;
 
-    background:#ffffff;
+    background:linear-gradient(160deg,#ffffff 0%,#f5f7ff 100%);
 
-    border:1px solid #e2e8f0;
+    border:1px solid #e0e7ff;
 
-    border-radius:18px;
+    border-radius:20px;
 
     padding:25px;
 
-    box-shadow:0 8px 25px rgba(0,0,0,.06);
+    box-shadow:0 8px 25px rgba(79,70,229,.08);
+
+    transition:.3s;
+
+}
+
+.recent:hover{
+
+    box-shadow:0 15px 35px rgba(79,70,229,.12);
 
 }
 
@@ -254,7 +292,7 @@
 
 .recent-header h2{
 
-    color:#1e293b;
+    color:#1e1b4b;
 
     font-size:24px;
 
@@ -278,7 +316,7 @@
 
     background:#f8fafc;
 
-    border:1px solid #e2e8f0;
+    border:1px solid #e0e7ff;
 
     transition:.3s;
 
@@ -286,7 +324,9 @@
 
 .student-box:hover{
 
-    background:#eff6ff;
+    background:#f5f3ff;
+
+    border-color:#c7d2fe;
 
     transform:translateX(5px);
 
@@ -306,13 +346,15 @@
 
     align-items:center;
 
-    background:#2563eb;
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);
 
     color:white;
 
     font-weight:bold;
 
     font-size:18px;
+
+    box-shadow:0 6px 15px rgba(79,70,229,.3);
 
 }
 
@@ -338,7 +380,10 @@
 
     font-weight:700;
 
-    color:#2563eb;
+    background:linear-gradient(90deg,#4f46e5,#7c3aed);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
 
 }
 /* =========================================
@@ -360,15 +405,15 @@
 .insight-card,
 .top-card{
 
-    background:#ffffff;
+    background:linear-gradient(160deg,#ffffff 0%,#f5f7ff 100%);
 
-    border:1px solid #e2e8f0;
+    border:1px solid #e0e7ff;
 
-    border-radius:18px;
+    border-radius:20px;
 
     padding:25px;
 
-    box-shadow:0 8px 25px rgba(0,0,0,.06);
+    box-shadow:0 8px 25px rgba(79,70,229,.08);
 
     transition:.3s;
 
@@ -379,7 +424,9 @@
 
     transform:translateY(-5px);
 
-    box-shadow:0 15px 35px rgba(37,99,235,.10);
+    box-shadow:0 15px 35px rgba(79,70,229,.15);
+
+    border-color:#c7d2fe;
 
 }
 
@@ -388,9 +435,11 @@
 
     font-size:24px;
 
-    color:#1e293b;
+    color:#1e1b4b;
 
     margin-bottom:18px;
+
+    font-weight:700;
 
 }
 
@@ -406,7 +455,7 @@
 
     padding:12px 0;
 
-    border-bottom:1px solid #e2e8f0;
+    border-bottom:1px solid #e0e7ff;
 
     color:#475569;
 
@@ -430,11 +479,16 @@
 
     font-size:58px;
 
-    color:#2563eb;
-
     margin:15px 0;
 
     font-weight:700;
+
+    background:linear-gradient(90deg,#4f46e5,#7c3aed,#2563eb);
+    background-size:200% auto;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+    animation:gradientShift 6s ease infinite;
 
 }
 
@@ -462,7 +516,7 @@
 
     font-size:15px;
 
-    border-top:1px solid #e2e8f0;
+    border-top:1px solid #e0e7ff;
 
 }
 
