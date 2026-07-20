@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import HomeNavbar from "../components/HomeNavbar";
-import "../css/home.css";
+import "../css/Home.css";
 
 
 
