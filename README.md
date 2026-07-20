@@ -181,3 +181,128 @@ The trained model predicts the student's **Expected Final Marks**.
 5. The predicted final marks are generated.
 6. Prediction results are stored in the MySQL database.
 7. The dashboard displays analytics, charts, and reports.
+---
+
+# 🚀 Installation Guide
+
+Follow these steps to run the project on your local machine.
+
+## 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/YOUR_GITHUB_USERNAME/AI_Student_Performance_Prediction.git
+```
+
+Replace `YOUR_GITHUB_USERNAME` with your actual GitHub username.
+
+---
+
+## 2️⃣ Backend Setup
+
+Navigate to the backend folder:
+
+```bash
+cd Backend
+```
+
+Create a virtual environment:
+
+```bash
+python -m venv .venv
+```
+
+Activate the virtual environment:
+
+### Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+source .venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Start the FastAPI server:
+
+```bash
+uvicorn main:app --reload
+```
+
+Backend will run on:
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+## 3️⃣ Frontend Setup
+
+Open another terminal and navigate to the frontend folder:
+
+```bash
+cd Frontend
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the React application:
+
+```bash
+npm run dev
+```
+
+Frontend will run on:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## 4️⃣ Database Setup
+
+- Install MySQL Server.
+- Create a database named:
+
+```sql
+student_prediction_db
+```
+
+- Update your database configuration in the backend.
+- Import the student dataset if required.
+
+---
+
+## 5️⃣ Access the Application
+
+Frontend:
+
+```text
+http://localhost:5173
+```
+
+Backend API:
+
+```text
+http://127.0.0.1:8000
+```
+
+FastAPI Documentation:
+
+```text
+http://127.0.0.1:8000/docs
+```
