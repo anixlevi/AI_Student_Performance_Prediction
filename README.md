@@ -140,3 +140,44 @@ The trained model predicts the student's **Expected Final Marks**.
 - Reduces overfitting
 - Works well with structured datasets
 - Provides stable and reliable predictions
+---
+
+# ⚙️ System Architecture
+
+```text
+                    +----------------------+
+                    |      React.js UI     |
+                    |   (Frontend - Vite)  |
+                    +----------+-----------+
+                               |
+                               | REST API (Axios)
+                               ▼
+                    +----------------------+
+                    |   FastAPI Backend    |
+                    |  (Business Logic)    |
+                    +----------+-----------+
+                               |
+               +---------------+---------------+
+               |                               |
+               ▼                               ▼
+      +------------------+           +----------------------+
+      | Machine Learning |           |     MySQL Database   |
+      | Random Forest    |           | Student Information  |
+      +------------------+           +----------------------+
+               |
+               ▼
+      +----------------------+
+      | Prediction Result    |
+      | Dashboard & Reports  |
+      +----------------------+
+```
+
+## 🔄 Application Workflow
+
+1. User enters student details through the React frontend.
+2. The frontend sends the data to the FastAPI backend using REST APIs.
+3. The backend validates the input data.
+4. The trained Random Forest model processes the input.
+5. The predicted final marks are generated.
+6. Prediction results are stored in the MySQL database.
+7. The dashboard displays analytics, charts, and reports.
