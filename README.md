@@ -399,3 +399,19 @@ http://127.0.0.1:8000/redoc
 ## 📄 Prediction Report
 
 ![Report](screenshots/Report.png)
+---
+
+# 🚀 Future Scope
+
+The AI Student Performance Prediction System can be enhanced with several advanced features in future releases:
+
+- 🤖 Deep Learning models for improved prediction accuracy.
+- 📱 Mobile application for Android and iOS.
+- 👨‍🏫 Faculty and Student Login Portal.
+- 📧 Email and SMS notifications for performance reports.
+- 📊 Advanced analytics and interactive visualizations.
+- ☁️ Cloud deployment using AWS, Azure, or Google Cloud.
+- 🔒 Role-based authentication and authorization.
+- 📚 Personalized learning recommendations based on AI predictions.
+- 📈 Real-time performance monitoring dashboard.
+- 🌍 Multi-language support for wider accessibility.
