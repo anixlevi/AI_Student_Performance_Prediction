@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import API from "../api/axios";
-import "../css/dashboard.css";
+import "../css/Dashboard.css";
 
 
 import Navbar from "../components/Navbar";
