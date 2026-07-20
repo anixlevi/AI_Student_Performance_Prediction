@@ -361,7 +361,7 @@ http://127.0.0.1:8000/redoc
 
 ## login
 
-![ login ](screenshorts/login.png)
+![ login ](screenshots/login.png)
 
 ---
 # 📸 Project Screenshots
