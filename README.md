@@ -250,7 +250,7 @@ uvicorn main:app --reload
 
 Backend will run on:
 
-## 3️⃣ Frontend Setup
+### 3️⃣ Frontend Setup
 
 Open another terminal and navigate to the frontend folder:
 
@@ -264,6 +264,8 @@ Install dependencies:
 npm install
 ```
 
+Create a `.env` file inside the `Frontend` folder and add:
+
 Start the React application:
 
 ```bash
@@ -271,12 +273,6 @@ npm run dev
 ```
 
 Frontend will run on:
-
-```text
-http://localhost:5173
-```
-
----
 
 ## 4️⃣ Database Setup
 
