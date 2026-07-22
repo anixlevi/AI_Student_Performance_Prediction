@@ -186,8 +186,23 @@ The trained model predicts the student's **Expected Final Marks**.
 # 🚀 Installation Guide
 
 Follow these steps to run the project on your local machine.
+#
 
-## 1️⃣ Clone the Repository
+An intelligent platform that uses Machine Learning to analyze student performance and predict future academic results.
+
+## 🌐 Live Demo
+
+- **Frontend (Vercel):** https://ai-student-performance-prediction-pi.vercel.app
+- **Backend API (Render):** https://anix-ai-student-performance-prediction.onrender.com
+- **API Documentation (Swagger UI):** https://anix-ai-student-performance-prediction.onrender.com/docs
+
+---
+
+## 🚀 Installation Guide (Run Locally)
+
+Follow these steps to run the project on your local machine.
+
+### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/YOUR_GITHUB_USERNAME/AI_Student_Performance_Prediction.git
@@ -195,9 +210,7 @@ git clone https://github.com/YOUR_GITHUB_USERNAME/AI_Student_Performance_Predict
 
 Replace `YOUR_GITHUB_USERNAME` with your actual GitHub username.
 
----
-
-## 2️⃣ Backend Setup
+### 2️⃣ Backend Setup
 
 Navigate to the backend folder:
 
@@ -213,14 +226,12 @@ python -m venv .venv
 
 Activate the virtual environment:
 
-### Windows
-
+**Windows**
 ```bash
 .venv\Scripts\activate
 ```
 
-### Linux / macOS
-
+**Linux / macOS**
 ```bash
 source .venv/bin/activate
 ```
@@ -238,12 +249,6 @@ uvicorn main:app --reload
 ```
 
 Backend will run on:
-
-```text
-http://127.0.0.1:8000
-```
-
----
 
 ## 3️⃣ Frontend Setup
 
