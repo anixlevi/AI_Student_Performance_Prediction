@@ -217,19 +217,43 @@ return (
 <div className="dashboard">
 
 
+{/* Hero Section */}
 
-    {/* Hero Section */}
+<div className="hero">
 
-    <div className="hero">
+    <div className="hero-left">
 
+        <div className="hero-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                <path d="M12 3L2 8l10 5 8-4.2V15h1.5V8L12 3z" fill="#4f46e5"/>
+                <path d="M5.5 10.7v4.3c0 1.7 2.9 3 6.5 3s6.5-1.3 6.5-3v-4.3L12 13z" fill="#7c3aed"/>
+            </svg>
+        </div>
 
         <h1>
 
-            AI Sƚυԃҽɳƚ Pҽɾϝσɾɱαɳƈҽ Pɾҽԃιƈƚισɳ Sყʂƚҽɱ DαʂԋႦσαɾԃ
+            Λ𝙸 𝚂𝚝𝚞𝚍𝚎𝚗𝚝 𝙿𝚎𝚛𝚏𝚘𝚛𝚖𝚊𝚗𝚌𝚎 𝙿𝚛𝚎𝚍𝚒𝚌𝚝𝚒𝚘𝚗 𝚂𝚢𝚜𝚝𝚎𝚖
 
         </h1>
 
+            <p >
+                🚀 Predict • Analyze • Improve — Powered by Machine Learning
+            </p>
 
+        <div className="tech-badges">
+
+            <span className="tech-badge tech-react">⚛️ REACT</span>
+            <span className="tech-badge tech-fastapi">🔺 FASTAPI</span>
+            <span className="tech-badge tech-python">🐍 PYTHON</span>
+            <span className="tech-badge tech-mysql">🗄️ MYSQL</span>
+
+        </div>
+
+    </div>
+
+
+
+    <div className="hero-right">
 
         <p className="subtitle">
 
@@ -237,13 +261,10 @@ return (
 
         </p>
 
-
     </div>
 
 
-
-
-
+</div>
     {/* Statistics Cards */}
 
 
@@ -406,7 +427,19 @@ return (
 
 
             <h2>
-                📊 Attendance Analytics
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style={{marginRight:"8px",verticalAlign:"middle"}}>
+                    <rect x="3" y="14" width="2" height="7" fill="#34d399"/>
+                    <rect x="6.5" y="10" width="2" height="11" fill="#34d399"/>
+                    <rect x="10" y="6" width="2" height="15" fill="#34d399"/>
+                    <rect x="13.5" y="9" width="2" height="12" fill="#34d399"/>
+                    <rect x="17" y="4" width="2" height="17" fill="#34d399"/>
+                    <path d="M3 19l4.5-4.5 3.5 3 5-6 4-4" stroke="#4f46e5" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                    <circle cx="3" cy="19" r="2" fill="#4f46e5"/>
+                    <circle cx="7.5" cy="14.5" r="2" fill="#4f46e5"/>
+                    <circle cx="11" cy="17.5" r="2" fill="#4f46e5"/>
+                    <circle cx="16" cy="11.5" r="2" fill="#4f46e5"/>
+                    <circle cx="20" cy="7.5" r="2" fill="#4f46e5"/>
+                    </svg> Attendance Analytics
             </h2>
 
 
@@ -720,7 +753,15 @@ return (
 
                 <li>
 
-                    👨‍🎓 Total Students :
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style={{marginRight:"8px",verticalAlign:"middle"}}>
+                        <path d="M12 3L4 7l8 4 8-4-8-4z" fill="#7dd3f0" stroke="#4b5563" strokeWidth="1"/>
+                        <path d="M18 8v3.5" stroke="#4b5563" strokeWidth="1" strokeLinecap="round"/>
+                        <circle cx="18" cy="12.3" r="0.8" fill="#4b5563"/>
+                        <path d="M8 9.5v2.5a4 4 0 0 0 8 0V9.5" stroke="#4b5563" strokeWidth="1" fill="none"/>
+                        <path d="M10.5 15v2l1.5 1.5 1.5-1.5v-2" fill="#7dd3f0" stroke="#4b5563" strokeWidth="1"/>
+                        <path d="M5.5 21v-1.5A4.5 4.5 0 0 1 10 15h4a4.5 4.5 0 0 1 4.5 4.5V21" stroke="#4b5563" strokeWidth="1" fill="none"/>
+                        <path d="M8.5 19v1.5M15.5 19v1.5" stroke="#4b5563" strokeWidth="1" strokeLinecap="round"/>
+                        </svg> Total Students :
 
                     <strong>
                         {" "}{totalStudents}
@@ -731,8 +772,20 @@ return (
 
 
                 <li>
-
-                    📊 Average Attendance :
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style={{marginRight:"8px",verticalAlign:"middle"}}>
+                        <rect x="3" y="14" width="2" height="7" fill="#34d399"/>
+                        <rect x="6.5" y="10" width="2" height="11" fill="#34d399"/>
+                        <rect x="10" y="6" width="2" height="15" fill="#34d399"/>
+                        <rect x="13.5" y="9" width="2" height="12" fill="#34d399"/>
+                        <rect x="17" y="4" width="2" height="17" fill="#34d399"/>
+                        <path d="M3 19l4.5-4.5 3.5 3 5-6 4-4" stroke="#4f46e5" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                        <circle cx="3" cy="19" r="2" fill="#4f46e5"/>
+                        <circle cx="7.5" cy="14.5" r="2" fill="#4f46e5"/>
+                        <circle cx="11" cy="17.5" r="2" fill="#4f46e5"/>
+                        <circle cx="16" cy="11.5" r="2" fill="#4f46e5"/>
+                        <circle cx="20" cy="7.5" r="2" fill="#4f46e5"/>
+                        </svg>
+                    Average Attendance :
 
                     <strong>
                         {" "}{averageAttendance}%

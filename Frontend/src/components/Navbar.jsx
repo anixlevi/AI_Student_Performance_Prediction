@@ -26,46 +26,60 @@ function Navbar() {
             >
 
                 <svg
-
                     className="brand-icon"
-
                     viewBox="0 0 128 128"
-
                     fill="none"
-
                     xmlns="http://www.w3.org/2000/svg"
-
                 >
-
                     <defs>
-                        <linearGradient id="navRing" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse">
-                            <stop offset="0" stopColor="#4338ca"/>
-                            <stop offset="1" stopColor="#0891b2"/>
-                        </linearGradient>
-                        <linearGradient id="navChip" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse">
-                            <stop offset="0" stopColor="#eef2ff"/>
-                            <stop offset="1" stopColor="#ecfeff"/>
-                        </linearGradient>
+                        <style>
+                            {`
+                                .cap-bg { fill: #7CC0F0; stroke: #FFFFFF; stroke-width: 2.5; stroke-linejoin: round; }
+                                .cap-base { fill: #7CC0F0; stroke: #FFFFFF; stroke-width: 2.5; stroke-linejoin: round; }
+                                .tassel { fill: none; stroke: #FFFFFF; stroke-width: 1.5; }
+                                .tassel-tip { fill: #7CC0F0; stroke: #FFFFFF; stroke-width: 1.5; }
+
+                                .predict-arrow { fill: #F26B6B; stroke: #FFFFFF; stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+                                .trend-line { fill: none; stroke: #FFFFFF; stroke-width: 1.5; stroke-linecap: round; }
+                                .trend-dot { fill: #FFFFFF; }
+
+                                .ai-wire { fill: none; stroke: #FFFFFF; stroke-width: 1.5; stroke-linejoin: round; }
+                                .ai-dot { fill: #94A3B8; stroke: #FFFFFF; stroke-width: 1; }
+                            `}
+                        </style>
                     </defs>
 
-                    <circle cx="64" cy="64" r="58" stroke="url(#navRing)" strokeWidth="5" fill="none"/>
+                    <g transform="translate(10, 15)">
+                        <path className="cap-bg" d="M 54,25 L 102,48 L 54,71 L 6,48 Z" />
+                        <path className="cap-base" d="M 26,57 L 26,78 C 26,85 82,85 82,78 L 82,57" />
+                        <path className="tassel" d="M 54,48 L 92,58 L 92,72" />
+                        <polygon className="tassel-tip" points="89,72 95,72 96,82 88,82" />
 
-                    <circle cx="64" cy="64" r="44" fill="url(#navChip)"/>
+                        <path className="predict-arrow" d="M 22,88 L 38,68 L 52,80 L 74,48 L 70,45 L 85,41 L 86,57 L 81,54 L 60,88 Z" />
 
-                    <circle cx="42" cy="52" r="4" fill="#4338ca"/>
-                    <circle cx="64" cy="40" r="4" fill="#4338ca"/>
-                    <circle cx="86" cy="52" r="4" fill="#0891b2"/>
-                    <circle cx="64" cy="64" r="5" fill="#1e293b"/>
+                        <path className="trend-line" d="M 27,84 L 39,70 L 52,81 L 71,54" />
+                        <circle className="trend-dot" cx="27" cy="84" r="1.5" />
+                        <circle className="trend-dot" cx="39" cy="70" r="1.5" />
+                        <circle className="trend-dot" cx="52" cy="81" r="1.5" />
+                        <circle className="trend-dot" cx="71" cy="54" r="1.5" />
 
-                    <path d="M42 52L64 64" stroke="#4338ca" strokeWidth="2.4" strokeLinecap="round"/>
-                    <path d="M64 40L64 64" stroke="#4338ca" strokeWidth="2.4" strokeLinecap="round"/>
-                    <path d="M86 52L64 64" stroke="#0891b2" strokeWidth="2.4" strokeLinecap="round"/>
+                        <g transform="translate(74, 20)">
+                            <path className="ai-wire" d="M 10,18 L 22,8 L 34,15 L 25,28 L 8,24 L 10,18 Z" />
+                            <path className="ai-wire" d="M 22,8 L 25,28 M 10,18 L 25,28 M 8,24 L 22,8 M 34,15 L 8,24" />
+                            <line x1="20" y1="18" x2="10" y2="18" className="ai-wire" />
+                            <line x1="20" y1="18" x2="22" y2="8" className="ai-wire" />
+                            <line x1="20" y1="18" x2="34" y2="15" className="ai-wire" />
+                            <line x1="20" y1="18" x2="25" y2="28" className="ai-wire" />
+                            <line x1="20" y1="18" x2="8" y2="24" className="ai-wire" />
 
-                    <path d="M44 88L54 78L64 84L84 62" stroke="#16a34a" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <circle cx="54" cy="78" r="2.6" fill="#16a34a"/>
-                    <circle cx="64" cy="84" r="2.6" fill="#16a34a"/>
-                    <circle cx="84" cy="62" r="2.6" fill="#16a34a"/>
-
+                            <circle className="ai-dot" cx="10" cy="18" r="2.2" />
+                            <circle className="ai-dot" cx="22" cy="8" r="2.2" />
+                            <circle className="ai-dot" cx="34" cy="15" r="2.2" />
+                            <circle className="ai-dot" cx="25" cy="28" r="2.2" />
+                            <circle className="ai-dot" cx="8" cy="24" r="2.2" />
+                            <circle className="ai-dot" cx="20" cy="18" r="2.8" />
+                        </g>
+                    </g>
                 </svg>
 
                 <span>

@@ -101,10 +101,14 @@ return (
 <div className="card shadow p-4">
 
 
-<h2 className="text-center mb-4">
-
-🎓 Student Registration
-
+<h2 className="text-center mb-4 d-flex align-items-center justify-content-center gap-2">
+<svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 3L22 8L12 13L2 8L12 3Z" fill="#334155"/>
+    <path d="M6 10.5V16C6 16 8.5 18.5 12 18.5C15.5 18.5 18 16 18 16V10.5" stroke="#334155" strokeWidth="1.6" strokeLinejoin="round" fill="none"/>
+    <path d="M22 8V15" stroke="#334155" strokeWidth="1.8" strokeLinecap="round"/>
+    <circle cx="22" cy="16.5" r="1.4" fill="#334155"/>
+</svg>
+    Student Registration
 </h2>
 
 

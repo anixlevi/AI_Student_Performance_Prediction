@@ -80,7 +80,16 @@ function Students(){
 
 <h1 className="text-center">
 
-👨‍🎓 Student Management
+<svg width="36" height="36" viewBox="0 0 24 24" fill="none" style={{marginRight:"8px",verticalAlign:"middle"}}>
+    <path d="M12 3L4 7l8 4 8-4-8-4z" fill="#7dd3f0" stroke="#4b5563" strokeWidth="1"/>
+    <path d="M18 8v3.5" stroke="#4b5563" strokeWidth="1" strokeLinecap="round"/>
+    <circle cx="18" cy="12.3" r="0.8" fill="#4b5563"/>
+    <path d="M8 9.5v2.5a4 4 0 0 0 8 0V9.5" stroke="#4b5563" strokeWidth="1" fill="none"/>
+    <path d="M10.5 15v2l1.5 1.5 1.5-1.5v-2" fill="#7dd3f0" stroke="#4b5563" strokeWidth="1"/>
+    <path d="M5.5 21v-1.5A4.5 4.5 0 0 1 10 15h4a4.5 4.5 0 0 1 4.5 4.5V21" stroke="#4b5563" strokeWidth="1" fill="none"/>
+    <path d="M8.5 19v1.5M15.5 19v1.5" stroke="#4b5563" strokeWidth="1" strokeLinecap="round"/>
+</svg>
+     Student Management
 
 </h1>
 

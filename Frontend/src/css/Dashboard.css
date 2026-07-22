@@ -14,42 +14,53 @@
     color:#1e293b;
 
 }
-
-
 /* =========================================
                 HERO
 ========================================= */
 
 .dashboard .hero{
 
-    text-align:center;
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
 
     margin-bottom:45px;
 
 }
 
+.hero-left{
+
+    flex:1;
+
+    min-width:280px;
+
+}
+
+.hero-icon{
+
+    display:flex;
+
+    margin-bottom:12px;
+
+}
+
 .dashboard .hero h1{
 
-    font-size:42px;
+    font-size:36px;
 
     font-weight:700;
 
     color:#1e1b4b;
 
-    margin-bottom:10px;
-
     letter-spacing:-1px;
 
-}
-
-.dashboard .hero h1 span{
-
-    background:linear-gradient(90deg,#4f46e5,#7c3aed,#2563eb);
-    background-size:200% auto;
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    background-clip:text;
-    animation:gradientShift 6s ease infinite;
+    margin:0 0 10px 0;
 
 }
 
@@ -57,6 +68,111 @@
     0%{background-position:0% center;}
     50%{background-position:100% center;}
     100%{background-position:0% center;}
+}
+
+.tagline{
+
+    font-size:16px;
+
+    font-weight:600;
+
+    background:linear-gradient(90deg,#4f46e5,#7c3aed);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+
+    margin-bottom:16px;
+
+}
+
+.tech-badges{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+.tech-badge{
+
+    display:inline-flex !important;
+
+    align-items:center !important;
+
+    gap:6px !important;
+
+    padding:8px 18px !important;
+
+    border-radius:30px !important;
+
+    font-size:13px !important;
+
+    font-weight:700 !important;
+
+    letter-spacing:.3px !important;
+
+    line-height:normal !important;
+
+    white-space:nowrap !important;
+
+    width:auto !important;
+
+    height:auto !important;
+
+    background-clip:border-box !important;
+
+    -webkit-background-clip:border-box !important;
+
+    color:#ffffff !important;
+
+    -webkit-text-fill-color:#ffffff !important;
+
+    opacity:1 !important;
+
+    text-indent:0 !important;
+
+    overflow:visible !important;
+
+}
+
+.tech-react{
+
+    background:linear-gradient(135deg,#20232a,#61dafb) !important;
+
+}
+
+.tech-fastapi{
+
+    background:linear-gradient(135deg,#005571,#009688) !important;
+
+}
+
+.tech-python{
+
+    background:linear-gradient(135deg,#ffd43b,#3776ab) !important;
+
+    color:#1e1b4b !important;
+
+    -webkit-text-fill-color:#1e1b4b !important;
+
+}
+
+.tech-mysql{
+
+    background:linear-gradient(135deg,#00000f,#4479a1) !important;
+
+}
+
+.hero-right{
+
+    flex-shrink:0;
+
+    max-width:320px;
+
+    text-align:right;
+
 }
 
 .subtitle{
@@ -67,7 +183,67 @@
 
 }
 
+@media(max-width:768px){
 
+.dashboard .hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.hero-left{
+
+    text-align:center;
+
+}
+
+.hero-icon{
+
+    justify-content:center;
+
+}
+
+.tech-badges{
+
+    justify-content:center;
+
+}
+
+.hero-right{
+
+    max-width:100%;
+
+    text-align:center;
+
+}
+
+.dashboard .hero h1{
+
+    font-size:28px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.tech-badges{
+
+    gap:8px;
+
+}
+
+.tech-badge{
+
+    padding:6px 14px !important;
+
+    font-size:11px !important;
+
+}
+
+}
 /* =========================================
             DASHBOARD CARDS
 ========================================= */

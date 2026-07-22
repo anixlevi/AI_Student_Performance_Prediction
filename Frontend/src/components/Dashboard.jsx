@@ -824,7 +824,7 @@ showChart && (
 
 
 <h2>
-📊 Student Performance Analysis
+Student Performance Analysis
 </h2>
 
 

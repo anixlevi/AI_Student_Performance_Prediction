@@ -99,42 +99,47 @@ function Prediction(){
         <>
 
         <Navbar/>
-
         <div className="prediction-page">
-
 
             <section className="prediction-hero">
 
                 <div className="hero-title">
+    <div className="hero-icon-wrap">
+        <svg width="56" height="46" viewBox="0 0 220 180" fill="none">
 
-                    <svg
+            <rect x="150" y="120" width="24" height="40" rx="3" fill="#f9a8c9"/>
+            <rect x="118" y="95" width="24" height="65" rx="3" fill="#f9a8c9"/>
+            <rect x="86" y="70" width="24" height="90" rx="3" fill="#f9a8c9"/>
+            <rect x="54" y="130" width="24" height="30" rx="3" fill="#f9a8c9"/>
 
-                        className="hero-icon"
+            <circle cx="185" cy="60" r="20" fill="none" stroke="#e11d48" strokeWidth="3"/>
+            <circle cx="185" cy="60" r="12" fill="none" stroke="#e11d48" strokeWidth="3"/>
+            <circle cx="185" cy="60" r="4" fill="#e11d48"/>
+            <path d="M198 40l10-10M203 33l5 2-2 5z" stroke="#e11d48" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="#e11d48"/>
 
-                        viewBox="0 0 64 64"
+            <circle cx="42" cy="55" r="14" fill="none" stroke="#f9a8c9" strokeWidth="6"/>
+            <circle cx="70" cy="45" r="10" fill="none" stroke="#cbd5e1" strokeWidth="5"/>
 
-                        xmlns="http://www.w3.org/2000/svg"
+            <circle cx="45" cy="120" r="14" fill="none" stroke="#334155" strokeWidth="2.5"/>
+            <path d="M39 132h12M41 137h8" stroke="#334155" strokeWidth="2.5" strokeLinecap="round"/>
+            <path d="M45 106v-5M32 113l-4-4M58 113l4-4" stroke="#334155" strokeWidth="2" strokeLinecap="round"/>
 
-                    >
+            <circle cx="112" cy="88" r="12" fill="#e11d48"/>
+            <rect x="103" y="97" width="18" height="20" rx="4" fill="#0f172a"/>
+            <rect x="98" y="100" width="6" height="18" rx="3" fill="#e11d48"/>
+            <path d="M120 105l14-8" stroke="#e11d48" strokeWidth="5" strokeLinecap="round"/>
+            <rect x="106" y="117" width="6" height="18" rx="3" fill="#0f172a"/>
+            <rect x="114" y="120" width="6" height="15" rx="3" fill="#0f172a"/>
+            <ellipse cx="109" cy="137" rx="6" ry="3" fill="#e11d48"/>
+            <ellipse cx="120" cy="138" rx="6" ry="3" fill="#e11d48"/>
 
-                        <path d="M32 6C24 6 18 13 18 21C18 21 12 22 12 30C12 36 16 40 21 41V44C21 47.3 23.7 50 27 50H37C40.3 50 43 47.3 43 44V41C48 40 52 36 52 30C52 22 46 21 46 21C46 13 40 6 32 6Z" fill="#2b8a99"/>
+        </svg>
+    </div>
 
-                        <path d="M32 10C25.4 10 21 15.4 21 21.5C21 21.5 16 22.5 16 29C16 34 19.5 37.5 24 38.3V42C24 44.5 26 46.5 28.5 46.5H35.5C38 46.5 40 44.5 40 42V38.3C44.5 37.5 48 34 48 29C48 22.5 43 21.5 43 21.5C43 15.4 38.6 10 32 10Z" fill="#ffe066"/>
-
-                        <rect x="21" y="24" width="22" height="17" rx="8.5" fill="#1e293b"/>
-
-                        <path d="M25.5 30.5C27 28.7 29.6 28.7 31 30.5" stroke="#a8e6ef" strokeWidth="2" strokeLinecap="round"/>
-
-                        <path d="M33 30.5C34.4 28.7 37 28.7 38.5 30.5" stroke="#a8e6ef" strokeWidth="2" strokeLinecap="round"/>
-
-                    </svg>
-
-
-                    <h1>
-                        AI Student Performance Prediction
-                    </h1>
-
-                </div>
+    <h1>
+        Λ𝙸 𝚂𝚝𝚞𝚍𝚎𝚗𝚝 𝙿𝚎𝚛𝚏𝚘𝚛𝚖𝚊𝚗𝚌𝚎 𝙿𝚛𝚎𝚍𝚒𝚌𝚝𝚒𝚘𝚗
+    </h1>
+</div>
 
 
                 <p>
