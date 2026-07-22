@@ -274,44 +274,40 @@ npm run dev
 
 Frontend will run on:
 
-## 4️⃣ Database Setup
+### 4️⃣ Database Setup
 
 - Install MySQL Server.
 - Create a database named:
-
-```sql
-student_prediction_db
-```
-
-- Update your database configuration in the backend.
+- Update your database configuration in the backend `.env` file.
 - Import the student dataset if required.
 
+### 5️⃣ Access the Application (Local)
+
+- **Frontend:** http://localhost:5173
+- **Backend API:** http://127.0.0.1:8000
+- **FastAPI Documentation:** http://127.0.0.1:8000/docs
+
 ---
 
-## 5️⃣ Access the Application
+## ☁️ Deployment
 
-Frontend:
+This project is deployed using:
 
-```text
-http://localhost:5173
-```
+- **Frontend:** [Vercel](https://vercel.com) — deployed from the `Frontend` folder as the root directory.
+- **Backend:** [Render](https://render.com) — deployed as a Python web service running the FastAPI app via `uvicorn`.
 
-Backend API:
+Environment variables used in production:
 
-```text
-http://127.0.0.1:8000
-```
+| Platform | Variable | Purpose |
+|----------|----------|---------|
+| Vercel | `VITE_API_URL` | Points frontend to the live Render backend URL |
+| Render | Database credentials | MySQL connection details for production database |
 
-FastAPI Documentation:
-
-```text
-http://127.0.0.1:8000/docs
-```
 ---
 
-# 📡 API Endpoints
+## 📡 API Endpoints
 
-The backend is built using **FastAPI** and provides RESTful APIs for managing students and predicting academic performance.
+The backend is built using FastAPI and provides RESTful APIs for managing students and predicting academic performance.
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -325,17 +321,8 @@ The backend is built using **FastAPI** and provides RESTful APIs for managing st
 
 FastAPI automatically generates interactive API documentation.
 
-### Swagger UI
-
-```text
-http://127.0.0.1:8000/docs
-```
-
-### ReDoc
-
-```text
-http://127.0.0.1:8000/redoc
-```
+- **Swagger UI:** https://anix-ai-student-performance-prediction.onrender.com/docs
+- **ReDoc:** https://anix-ai-student-performance-prediction.onrender.com/redoc
 
 ## 📥 Example Prediction Request
 
@@ -357,7 +344,6 @@ http://127.0.0.1:8000/redoc
   "predicted_marks": 84.23
 }
 ```
----
 # 🔐 Login
 
 ![Login](screenshots/login.png)
