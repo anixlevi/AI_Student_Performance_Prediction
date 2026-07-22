@@ -185,9 +185,6 @@ The trained model predicts the student's **Expected Final Marks**.
 
 # 🚀 Installation Guide
 
-
-#
-
 An intelligent platform that uses Machine Learning to analyze student performance and predict future academic results.
 
 ## 🌐 Live Demo
