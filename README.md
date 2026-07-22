@@ -1,4 +1,18 @@
-#ΛI Sƚυԃҽɳƚ Pҽɾϝσɾɱαɳƈҽ Pɾҽԃιƈƚισɳ Sყʂƚҽɱ
+<div align="center">
+
+<img src="https://img.icons8.com/fluency/96/graduation-cap.png" width="80" alt="logo"/>
+
+# AI Student Performance Prediction System
+### 🚀 Predict • Analyze • Improve — Powered by Machine Learning
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
+![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
+
+</div>
+
+---
 
 An AI-powered web application that predicts student academic performance using Machine Learning and provides an interactive dashboard for student management, analytics, and performance reporting.
 
