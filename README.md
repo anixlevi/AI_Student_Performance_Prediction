@@ -391,56 +391,24 @@ The predicted marks are stored in the database and displayed instantly on the da
 
 # 🔄 Application Workflow
 
-```text
-Student
+```mermaid
+flowchart TD
 
-      │
+A[👨‍🎓 Student Registration]
+B[(🗄️ MySQL Database)]
+C[⚙️ FastAPI Backend]
+D[🤖 Random Forest Model]
+E[📊 Prediction Result]
+F[📄 Generate Report]
+G[📈 Dashboard Analytics]
 
-      ▼
-
-Register Student
-
-      │
-
-      ▼
-
-Store Student Data
-
-      │
-
-      ▼
-
-Prediction Request
-
-      │
-
-      ▼
-
-FastAPI Backend
-
-      │
-
-      ▼
-
-Random Forest Model
-
-      │
-
-      ▼
-
-Predicted Marks
-
-      │
-
-      ▼
-
-Dashboard Analytics
-
-      │
-
-      ▼
-
-Download Report
+A --> B
+B --> C
+C --> D
+D --> E
+E --> F
+E --> G
+```
 ```
 
 ---
