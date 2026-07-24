@@ -382,101 +382,53 @@ D --> E
 E --> F
 E --> G
 ```
-```
+---
+ # Why Random Forest?
+...
+# 🚀 Quick Start
+
+- ✅ High Prediction Accuracy
+- ✅ Reduces Overfitting
+- ✅ Handles Complex Educational Data
+- ✅ Fast & Reliable Predictions
 
 ---
 
-# 💡 Why Random Forest?
+## 🚀 Quick Start
 
-✔ High Prediction Accuracy
-
-✔ Handles Non-linear Data
-
-✔ Reduces Overfitting
-
-✔ Stable Predictions
-
-✔ Works Well with Educational Datasets
-
-✔ Easy to Train & Deploy
-
----
-# 🚀 Installation Guide
-
-Follow these steps to set up and run the project locally.
-
----
-
-## 📋 Prerequisites
-
-Before starting, make sure the following software is installed on your system:
-
-- Python 3.12+
-- Node.js (Latest LTS Version)
-- npm
-- MySQL Server 8+
-- Git
-- Visual Studio Code (Recommended)
-
----
-
-# 📥 Clone the Repository
+### 1️⃣ Clone Repository
 
 ```bash
 git clone https://github.com/anixlevi/AI_Student_Performance_Prediction.git
-```
-
-Move into the project folder:
-
-```bash
 cd AI_Student_Performance_Prediction
 ```
 
----
-
-# ⚙️ Backend Setup
-
-Navigate to the backend folder.
+## 2️⃣ Backend
 
 ```bash
 cd Backend
-```
 
-### Create Virtual Environment
-
-```bash
 python -m venv .venv
-```
-
-### Activate Virtual Environment
-
-### Windows
-
-```bash
 .venv\Scripts\activate
-```
 
-### Linux / macOS
-
-```bash
-source .venv/bin/activate
-```
-
----
-
-### Install Dependencies
-
-```bash
 pip install -r requirements.txt
+
+uvicorn main:app --reload
 ```
 
----
+## 3️⃣ Frontend
 
-### Configure Environment Variables
+```bash
+cd Frontend
 
-Create a `.env` file inside the **Backend** folder.
+npm install
 
-Example:
+npm run dev
+```
+
+## 4️⃣ Configure Environment
+
+### Backend (.env)
 
 ```env
 DB_HOST=localhost
@@ -486,115 +438,39 @@ DB_USER=root
 DB_PASSWORD=your_password
 ```
 
----
-
-### Run FastAPI Server
-
-```bash
-uvicorn main:app --reload
-```
-
-Backend will start at:
-
-```
-http://127.0.0.1:8000
-```
-
-Swagger Documentation:
-
-```
-http://127.0.0.1:8000/docs
-```
-
----
-
-# 🎨 Frontend Setup
-
-Open another terminal.
-
-```bash
-cd Frontend
-```
-
-Install dependencies.
-
-```bash
-npm install
-```
-
-Create a `.env` file.
+### Frontend (.env)
 
 ```env
 VITE_API_URL=http://127.0.0.1:8000
 ```
 
-Run the development server.
-
-```bash
-npm run dev
-```
-
-Frontend will run at
-
-```
-http://localhost:5173
-```
-
 ---
 
-# 🗄️ Database Setup
-
-1. Install MySQL Server.
-2. Create a database.
-
-```sql
-CREATE DATABASE student_prediction_db;
-```
-
-3. Update database credentials inside the Backend `.env` file.
-4. Import the provided student dataset if required.
-5. Start the FastAPI server.
-
----
-
-# 🌍 Local URLs
+# 🌍 Application URLs
 
 | Service | URL |
-|----------|-----|
-| React Frontend | http://localhost:5173 |
-| FastAPI Backend | http://127.0.0.1:8000 |
-| Swagger API | http://127.0.0.1:8000/docs |
-| ReDoc | http://127.0.0.1:8000/redoc |
+|---------|-----|
+| 🌐 Frontend | http://localhost:5173 |
+| ⚙️ Backend | http://127.0.0.1:8000 |
+| 📘 Swagger API | http://127.0.0.1:8000/docs |
 
 ---
 
 # ☁️ Deployment
 
-The project is deployed using modern cloud platforms.
+| Component | Platform |
+|-----------|----------|
+| Frontend | Vercel |
+| Backend | Render |
+| Database | MySQL |
 
-| Platform | Purpose |
-|-----------|---------|
-| Vercel | React Frontend |
-| Render | FastAPI Backend |
-| MySQL | Database |
-| GitHub | Version Control |
+### 🔗 Live Demo
+
+- 🌐 Frontend: https://ai-student-performance-prediction-pi.vercel.app
+- ⚙️ Backend: https://anix-ai-student-performance-prediction.onrender.com
+- 📘 API Docs: https://anix-ai-student-performance-prediction.onrender.com/docs
 
 ---
-
-## 🌐 Live Application
-
-### Frontend
-
-https://ai-student-performance-prediction-pi.vercel.app
-
-### Backend API
-
-https://anix-ai-student-performance-prediction.onrender.com
-
-### Swagger Documentation
-
-https://anix-ai-student-performance-prediction.onrender.com/docs
-
 ---
 
 # 🔐 Environment Variables
