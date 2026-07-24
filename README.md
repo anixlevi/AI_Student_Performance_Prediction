@@ -1041,20 +1041,10 @@ an1ket0s1ngh000@gmail.com
 
 ---
 
-# 📄 License
+## 📄 License
 
-This project is licensed under the **MIT License**.
+This project is created for educational and portfolio purposes only.
 
-You are free to use, modify, and distribute this project in accordance with the terms of the license.
+Unauthorized copying, redistribution, or commercial use of this project without permission is prohibited.
 
----
-
-<div align="center">
-
-## ⭐ Thank You for Visiting ⭐
-
-If you like this project, don't forget to **Star ⭐ the Repository**.
-
-Made by **Aniket Singh**
-
-</div>
+© 2026 Aniket Singh. All Rights Reserved.
