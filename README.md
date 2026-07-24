@@ -390,77 +390,47 @@ D --> E
 E --> F
 E --> G
 ```
+# 🌲 Why Random Forest?
+
+| ✅ Benefit | 📌 Reason |
+|-----------|-----------|
+| High Accuracy | Provides reliable predictions for student performance |
+| Less Overfitting | Combines multiple decision trees |
+| Handles Complex Data | Learns non-linear relationships effectively |
+| Fast Prediction | Generates results instantly |
+| Robust Model | Performs well on educational datasets |
+
 ---
- # Why Random Forest?
-...
-# 🚀 Quick Start
 
-- ✅ High Prediction Accuracy
-- ✅ Reduces Overfitting
-- ✅ Handles Complex Educational Data
-- ✅ Fast & Reliable Predictions
-
----
-
-## 🚀 Quick Start
-
-### 1️⃣ Clone Repository
+# 🚀 Installation
 
 ```bash
+# Clone Repository
 git clone https://github.com/anixlevi/AI_Student_Performance_Prediction.git
 cd AI_Student_Performance_Prediction
 ```
 
-## 2️⃣ Backend
-
 ```bash
+# Backend
 cd Backend
-
 python -m venv .venv
 .venv\Scripts\activate
-
 pip install -r requirements.txt
-
 uvicorn main:app --reload
 ```
 
-## 3️⃣ Frontend
-
 ```bash
+# Frontend
 cd Frontend
-
 npm install
-
 npm run dev
 ```
-
-## 4️⃣ Configure Environment
-
-### Backend (.env)
-
-```env
-DB_HOST=localhost
-DB_PORT=3306
-DB_NAME=student_prediction_db
-DB_USER=root
-DB_PASSWORD=your_password
-```
-
-### Frontend (.env)
-
-```env
-VITE_API_URL=http://127.0.0.1:8000
-```
-
----
-
-# 🌍 Application URLs
 
 | Service | URL |
 |---------|-----|
 | 🌐 Frontend | http://localhost:5173 |
 | ⚙️ Backend | http://127.0.0.1:8000 |
-| 📘 Swagger API | http://127.0.0.1:8000/docs |
+| 📘 Swagger | http://127.0.0.1:8000/docs |
 
 ---
 
@@ -478,7 +448,6 @@ VITE_API_URL=http://127.0.0.1:8000
 - ⚙️ Backend: https://anix-ai-student-performance-prediction.onrender.com
 - 📘 API Docs: https://anix-ai-student-performance-prediction.onrender.com/docs
 
----
 ---
 
 # 🔐 Environment Variables
