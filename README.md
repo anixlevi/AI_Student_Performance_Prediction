@@ -2,7 +2,7 @@
 
 <img src="https://img.icons8.com/fluency/96/graduation-cap.png" width="90" alt="logo"/>
 
-# 🎓 AI Student Performance Prediction System
+# AI Student Performance Prediction System
 
 ### 🚀 Predict • Analyze • Improve using Machine Learning
 
