@@ -217,62 +217,35 @@ The trained Machine Learning model predicts:
 
 ---
 
-## ⚙️ Machine Learning Workflow
+# ⚙️ Machine Learning Workflow
 
-```text
-Dataset
+```mermaid
+flowchart TD
 
-      │
+A["📂 Dataset"]
+--> B["🧹 Data Cleaning"]
 
-      ▼
+B
+--> C["🎯 Feature Selection"]
 
-Data Cleaning
+C
+--> D["✂️ Train/Test Split"]
 
-      │
+D
+--> E["🌲 Random Forest Model"]
 
-      ▼
+E
+--> F["📊 Evaluate Model"]
 
-Feature Selection
+F
+--> G["💾 Export Model (.pkl)"]
 
-      │
+G
+--> H["⚡ FastAPI Backend"]
 
-      ▼
-
-Train-Test Split
-
-      │
-
-      ▼
-
-Random Forest Training
-
-      │
-
-      ▼
-
-Model Evaluation
-
-      │
-
-      ▼
-
-Save Model (.pkl)
-
-      │
-
-      ▼
-
-FastAPI Backend
-
-      │
-
-      ▼
-
-Prediction Result
+H
+--> I["🤖 Predict Student Marks"]
 ```
-
----
-
 # 📂 Dataset Information
 
 The project uses a structured dataset containing academic records of students.
