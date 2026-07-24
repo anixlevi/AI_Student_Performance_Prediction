@@ -260,21 +260,29 @@ The project uses a structured dataset containing academic records of students.
 | Train/Test Split | 80% / 20% |
 
 ---
+# Dataset Columns
 
-### Dataset Columns
+<p align="center">
 
-- Name
-- Age
-- Gender
-- Attendance
-- Study Hours
-- Previous Marks
-- Assignment Marks
-- Internal Marks
-- Final Marks
-- Result
+![Name](https://img.shields.io/badge/Name-Student-blue?style=for-the-badge)
+![Age](https://img.shields.io/badge/Age-Years-green?style=for-the-badge)
+![Gender](https://img.shields.io/badge/Gender-Male/Female-purple?style=for-the-badge)
+![Attendance](https://img.shields.io/badge/Attendance-%25-orange?style=for-the-badge)
 
----
+<br>
+
+![Study Hours](https://img.shields.io/badge/Study_Hours-Hours-red?style=for-the-badge)
+![Previous Marks](https://img.shields.io/badge/Previous_Marks-Score-blueviolet?style=for-the-badge)
+![Assignment Marks](https://img.shields.io/badge/Assignment_Marks-Score-success?style=for-the-badge)
+
+<br>
+
+![Internal Marks](https://img.shields.io/badge/Internal_Marks-Score-yellow?style=for-the-badge)
+![Final Marks](https://img.shields.io/badge/Final_Marks-Score-critical?style=for-the-badge)
+![Result](https://img.shields.io/badge/Result-Pass/Fail-brightgreen?style=for-the-badge)
+
+</p>
+
 
 # 📊 Model Performance
 
@@ -838,26 +846,25 @@ Passionate about:
 
 ---
 
-## 📬 Connect with Me
+# 📬 Connect with Me
 
-### GitHub
+<p align="center">
 
-https://github.com/anixlevi
+<a href="https://github.com/anixlevi">
+<img src="https://img.shields.io/badge/GitHub-anixlevi-181717?style=for-the-badge&logo=github">
+</a>
+
+<a href="https://www.linkedin.com/in/aniket-singh-439819389/">
+<img src="https://img.shields.io/badge/LinkedIn-Aniket%20Singh-0A66C2?style=for-the-badge&logo=linkedin">
+</a>
+
+<a href="mailto:an1ket0s1ngh000@gmail.com">
+<img src="https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail">
+</a>
+
+</p>
 
 ---
-
-### LinkedIn
-
-https://www.linkedin.com/in/aniket-singh-439819389/
-
----
-
-### Email
-
-an1ket0s1ngh000@gmail.com
-
----
-
 ## 📄 License
 
 This project is created for educational and portfolio purposes only.
