@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import API from "../api/axios";
 import Navbar from "../components/Navbar";
@@ -15,12 +15,23 @@ function Prediction(){
     const [error,setError] = useState("");
 
     const navigate = useNavigate();
+    const location = useLocation();
 
 
     useEffect(()=>{
         getStudents();
     },[]);
 
+
+    useEffect(()=>{
+
+        if(location.state && location.state.autoSelectId){
+
+            setStudentId(String(location.state.autoSelectId));
+
+        }
+
+    },[location.state]);
 
 
     const getStudents = async()=>{

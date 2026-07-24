@@ -1,6 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
+from fastapi import BackgroundTasks
+from utils.email_utils import send_welcome_email, send_prediction_result_email
+
 from database.database import get_db
 from models.student import Student as StudentModel
 
@@ -34,16 +37,18 @@ router = APIRouter()
 # REGISTER STUDENT
 # ================================
 
-
 @router.post("/register")
 def register_student(
     student: Student,
+    background_tasks: BackgroundTasks,
     db: Session = Depends(get_db)
 ):
 
     new_student = StudentModel(
 
         name = student.name,
+
+        email = student.email,
 
         age = student.age,
 
@@ -72,6 +77,12 @@ def register_student(
 
     db.refresh(new_student)
 
+    if new_student.email:
+        background_tasks.add_task(
+            send_welcome_email,
+            new_student.email,
+            new_student.name
+        )
 
     return {
 
@@ -80,9 +91,6 @@ def register_student(
         "student_id":new_student.student_id
 
     }
-
-
-
 
 
 # ================================
@@ -251,6 +259,7 @@ def delete_student(
 @router.post("/predict")
 def predict_marks(
     student: PredictionInput,
+    background_tasks: BackgroundTasks,
     db: Session = Depends(get_db)
 ):
 
@@ -298,6 +307,16 @@ def predict_marks(
     db.commit()
 
     db.refresh(student_data)
+
+    if student_data.email:
+        is_low = predicted_marks < 50
+        background_tasks.add_task(
+            send_prediction_result_email,
+            student_data.email,
+            student_data.name,
+            predicted_marks,
+            is_low
+        )
 
     return {
 

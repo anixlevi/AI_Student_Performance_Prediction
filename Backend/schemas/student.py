@@ -5,6 +5,8 @@ class Student(BaseModel):
 
     name: str
 
+    email: str | None = None
+
     age: int
 
     gender: str

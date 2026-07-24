@@ -3,39 +3,41 @@ import API from "../api/axios";
 import { useNavigate } from "react-router-dom";
 import "../css/login.css";
 
-function Login() {
+function Signup() {
 
     const navigate = useNavigate();
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
 
-    const handleLogin = async (e) => {
+    const handleSignup = async (e) => {
 
         e.preventDefault();
 
+        if (password !== confirmPassword) {
+            alert("Passwords do not match");
+            return;
+        }
+
         try {
 
-            const response = await API.post("/login", {
+            await API.post("/signup", {
                 username,
                 password
             });
 
-            alert("Login Successful");
+            alert("Account created successfully! Please log in.");
 
-            localStorage.setItem(
-                "username",
-                response.data.username
-            );
-
-            navigate("/home");
+            navigate("/login");
 
         }
         catch (error) {
 
             console.log(error);
 
-            alert("Login Failed");
+            const detail = error?.response?.data?.detail || "Signup Failed";
+            alert(detail);
 
         }
 
@@ -87,17 +89,17 @@ function Login() {
 
                 <div className="login-card">
 
-                    <h2>Welcome Back 👋</h2>
+                    <h2>Create Account 📝</h2>
 
                     <p className="login-subtitle">
-                        Login to continue using the AI Student Performance Prediction System
+                        Sign up to start using the AI Student Performance Prediction System
                     </p>
 
-                    <form onSubmit={handleLogin}>
+                    <form onSubmit={handleSignup}>
 
                         <input
                             type="text"
-                            placeholder="Username"
+                            placeholder="Choose a username"
                             className="login-input"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
@@ -105,39 +107,35 @@ function Login() {
 
                         <input
                             type="password"
-                            placeholder="Password"
+                            placeholder="Choose a password"
                             className="login-input"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />
 
-                        <div className="login-options">
-
-                            <label>
-                                <input type="checkbox" /> Remember Me
-                            </label>
-
-                            <a href="#">
-                                Forgot Password?
-                            </a>
-
-                        </div>
+                        <input
+                            type="password"
+                            placeholder="Confirm password"
+                            className="login-input"
+                            value={confirmPassword}
+                            onChange={(e) => setConfirmPassword(e.target.value)}
+                        />
 
                         <button
                             type="submit"
                             className="login-btn"
                         >
-                            🔐 Login
+                            📝 Create Account
                         </button>
 
                     </form>
 
                     <div className="register-link">
 
-                        Don't have an account?
+                        Already have an account?
 
-                        <span onClick={() => navigate("/auth/signup")} style={{ cursor: "pointer" }}>
-                            Register Now
+                        <span onClick={() => navigate("/login")} style={{ cursor: "pointer" }}>
+                            Login
                         </span>
 
                     </div>
@@ -152,4 +150,4 @@ function Login() {
 
 }
 
-export default Login;
+export default Signup;

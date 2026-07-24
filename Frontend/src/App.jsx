@@ -4,8 +4,9 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import PredictionResult from "./pages/PredictionResult";
 
 import Home from "./pages/Home";
-import Register from "./pages/Register";
+import Register from "./pages/RegisterStudent";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import Prediction from "./pages/Prediction";
 import Students from "./pages/Students";
@@ -26,7 +27,10 @@ function App() {
                     path="/auth/login"
                     element={<Login />}
                 />
-
+                <Route
+                    path="/auth/signup"
+                    element={<Signup />}
+                />
                 {/* Home */}
                 <Route
                     path="/home"

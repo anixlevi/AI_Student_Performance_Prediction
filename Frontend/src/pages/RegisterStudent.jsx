@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import API from "../api/axios";
 import Navbar from "../components/Navbar";
 import "../css/RegisterStudent.css";
@@ -6,8 +7,11 @@ import "../css/RegisterStudent.css";
 
 function Register() {
 
+    const navigate = useNavigate();
+
     const [student, setStudent] = useState({
         name: "",
+        email: "",
         age: "",
         gender: "",
         attendance: "",
@@ -20,6 +24,7 @@ function Register() {
     });
 
     const [successMessage, setSuccessMessage] = useState("");
+    const [registeredId, setRegisteredId] = useState(null);
 
     const handleChange = (e) => {
         setStudent({
@@ -28,9 +33,10 @@ function Register() {
         });
     };
 
-    const handleClear = () => {
+    const resetFormOnly = () => {
         setStudent({
             name: "",
+            email: "",
             age: "",
             gender: "",
             attendance: "",
@@ -41,7 +47,12 @@ function Register() {
             final_marks: "",
             result: ""
         });
+    };
+
+    const handleClear = () => {
+        resetFormOnly();
         setSuccessMessage("");
+        setRegisteredId(null);
     };
 
     const handleSubmit = async (e) => {
@@ -53,10 +64,11 @@ function Register() {
             const response = await API.post("/register", student);
 
             setSuccessMessage(
-                "Student registered successfully — ID: " + response.data.student_id
+                "✅ Student registered successfully! Student ID: " + response.data.student_id
             );
+            setRegisteredId(response.data.student_id);
 
-            handleClear();
+            resetFormOnly();
 
         }
         catch (error) {
@@ -101,6 +113,17 @@ function Register() {
                                     name="name"
                                     placeholder="Enter student name"
                                     value={student.name}
+                                    onChange={handleChange}
+                                />
+                            </div>
+
+                            <div className="form-group">
+                                <label>Email</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Enter email address"
+                                    value={student.email}
                                     onChange={handleChange}
                                 />
                             </div>
@@ -224,7 +247,33 @@ function Register() {
                         {
                             successMessage &&
                             <div className="success-message">
-                                {successMessage}
+
+                                <p style={{ margin: 0 }}>
+                                    {successMessage}
+                                </p>
+
+                                <p style={{ marginTop: "8px", marginBottom: 0, fontSize: "14px" }}>
+                                    👉 Next step: Go to the Prediction page and select
+                                    Student ID <b>{registeredId}</b> to predict their performance.
+                                </p>
+
+                                <button
+                                    type="button"
+                                    onClick={() => navigate("/prediction", { state: { autoSelectId: registeredId } })}
+                                    style={{
+                                        marginTop: "12px",
+                                        padding: "10px 18px",
+                                        background: "#6c5ce7",
+                                        color: "white",
+                                        border: "none",
+                                        borderRadius: "6px",
+                                        cursor: "pointer",
+                                        fontWeight: "600"
+                                    }}
+                                >
+                                    Go to Prediction →
+                                </button>
+
                             </div>
                         }
 

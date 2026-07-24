@@ -21,6 +21,10 @@ class Student(Base):
         nullable=False
     )
 
+    email = Column(
+        String(100),
+        nullable=True
+    )
 
     age = Column(
         Integer,
