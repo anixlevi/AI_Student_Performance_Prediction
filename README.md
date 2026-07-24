@@ -391,6 +391,11 @@ FastAPI automatically generates interactive API documentation.
   "predicted_marks": 84.23
 }
 ```
+# 📝 Create Account (Signup)
+
+![Signup](screenshots/Signup.png)
+
+---
 # 🔐 Login
 
 ![Login](screenshots/login.png)
