@@ -155,7 +155,23 @@ The trained model predicts the student's **Expected Final Marks**.
 - Works well with structured datasets
 - Provides stable and reliable predictions
 ---
+## 📊 Model Performance
 
+The model was evaluated on a held-out test set (80/20 train-test split):
+
+| Metric | Score |
+|--------|-------|
+| R² Score | 0.89 |
+| Mean Absolute Error (MAE) | ±4.48 marks |
+
+**Feature Importance:**
+- Assignment Marks — 43.1%
+- Previous Marks — 22.5%
+- Internal Marks — 21.3%
+- Attendance — 6.7%
+- Study Hours — 5.9%
+- Age — 0.4%
+---
 # ⚙️ System Architecture
 
 ```text
