@@ -13,14 +13,24 @@ def register_user(
     user: UserCreate,
     db: Session = Depends(get_db)
 ):
-    existing_user = db.query(User).filter(
+    existing_username = db.query(User).filter(
         User.username == user.username
     ).first()
 
-    if existing_user is not None:
+    if existing_username is not None:
         raise HTTPException(
             status_code=400,
             detail="Username already exists"
+        )
+
+    existing_email = db.query(User).filter(
+        User.email == user.email
+    ).first()
+
+    if existing_email is not None:
+        raise HTTPException(
+            status_code=400,
+            detail="Email already registered"
         )
 
     hashed_password = bcrypt.hashpw(
@@ -30,6 +40,7 @@ def register_user(
 
     new_user = User(
         username=user.username,
+        email=user.email,
         password=hashed_password
     )
 

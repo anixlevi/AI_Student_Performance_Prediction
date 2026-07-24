@@ -8,6 +8,7 @@ function Signup() {
     const navigate = useNavigate();
 
     const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
@@ -24,6 +25,7 @@ function Signup() {
 
             await API.post("/signup", {
                 username,
+                email,
                 password
             });
 
@@ -103,6 +105,14 @@ function Signup() {
                             className="login-input"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
+                        />
+
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            className="login-input"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
 
                         <input
