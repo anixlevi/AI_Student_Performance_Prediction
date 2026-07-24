@@ -87,25 +87,45 @@ This project demonstrates the integration of Machine Learning with a React front
 AI_Student_Performance_Prediction/
 │
 ├── Backend/
+│   ├── app/
+│   ├── database/
+│   │   ├── __init__.py
+│   │   └── database.py
+│   ├── Dataset/
+│   │   ├── student_performance.csv
+│   │   ├── student_performance_backup.csv
+│   │   └── add_noise.py
+│   ├── models/
+│   │   ├── base.py
+│   │   ├── student.py
+│   │   └── user.py
+│   ├── routes/
+│   │   ├── auth.py
+│   │   └── student.py
+│   ├── schemas/
+│   │   ├── predict.py
+│   │   ├── student.py
+│   │   └── user.py
+│   ├── services/
+│   ├── train_model/
+│   │   └── train.py
+│   ├── ml_model/
+│   │   └── model_loader.py
+│   ├── uploads/
+│   ├── utils/
+│   ├── .env
+│   ├── .gitignore
+│   ├── create_admin.py
+│   ├── create_demo_user.py
 │   ├── main.py
-│   ├── database.py
-│   ├── models.py
-│   ├── schemas.py
 │   ├── requirements.txt
-│   └── ...
+│   └── student_model.pkl
 │
 ├── Frontend/
 │   ├── src/
 │   ├── public/
 │   ├── package.json
 │   └── vite.config.js
-│
-├── Dataset/
-│   └── student_performance.csv
-│
-├── ML/
-│   ├── train.py
-│   └── student_model.pkl
 │
 └── README.md
 ```
