@@ -557,75 +557,61 @@ https://anix-ai-student-performance-prediction.onrender.com/redoc
 
 ---
 
-# 🔄 Prediction Process
+# 🔄 Prediction Pipeline
 
-```text
-Student Details
+```mermaid
+graph LR
 
-        │
+A["👨‍🎓 Student"]
+-->B["📝 Input Form"]
 
-        ▼
+B
+-->C["⚛️ React"]
 
-React Frontend
+C
+-->D["📡 REST API"]
 
-        │
+D
+-->E["⚡ FastAPI"]
 
-        ▼
+E
+-->F["🤖 Random Forest"]
 
-Axios API Request
+F
+-->G["📊 Prediction"]
 
-        │
+G
+-->H["📄 PDF"]
 
-        ▼
+G
+-->I["📈 Dashboard"]
 
-FastAPI Backend
-
-        │
-
-        ▼
-
-Random Forest Model
-
-        │
-
-        ▼
-
-Predicted Marks
-
-        │
-
-        ▼
-
-Database Storage
-
-        │
-
-        ▼
-
-Dashboard + Report Generation
+G
+-->J["🗄️ MySQL"]
 ```
+# 📡 API Flow
 
----
+```mermaid
+flowchart LR
 
-# 📈 API Flow
+A["⚛️ React UI"]
+--> B["📡 Axios Request"]
 
-```text
-React UI
-    │
-    ▼
-Axios Request
-    │
-    ▼
-FastAPI
-    │
-    ├──────────────► MySQL Database
-    │
-    └──────────────► Machine Learning Model
-                          │
-                          ▼
-                  Prediction Response
+B
+--> C["⚡ FastAPI"]
+
+C
+--> D[("🗄️ MySQL Database")]
+
+C
+--> E["🤖 Machine Learning Model"]
+
+E
+--> F["📊 Prediction Response"]
+
+F
+--> G["⚛️ React UI"]
 ```
-
 ---
 # 📸 Application Screenshots
 
