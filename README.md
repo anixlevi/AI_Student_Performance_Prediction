@@ -415,13 +415,13 @@ The AI Student Performance Prediction System can be enhanced with several advanc
 ---
 ## 🔑 Demo Login Credentials
 
-Use the following demo credentials to access the application.
+A read-only demo account is available so reviewers can explore the app without registering.
 
-| Username | Password         |
-| -------- | ---------------- |
-| **Anix** | **REDACTED** |
+| Username    | Password       |
+| ----------- | -------------- |
+| **demo**    | **Demo@1234**  |
 
-> **Note:** These credentials are provided for demonstration and evaluation purposes only.
+> ⚠️ **Note:** This is a dedicated demo account with limited/read-only permissions, seeded with sample data only. It is not linked to any real user or production data.
 ---
 
 # 👨‍💻 Author
