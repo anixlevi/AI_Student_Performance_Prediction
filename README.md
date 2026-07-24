@@ -1,52 +1,95 @@
 <div align="center">
 
-<img src="https://img.icons8.com/fluency/96/graduation-cap.png" width="80" alt="logo"/>
+<img src="https://img.icons8.com/fluency/96/graduation-cap.png" width="90" alt="logo"/>
 
-# AI Student Performance Prediction System
-### 🚀 Predict • Analyze • Improve — Powered by Machine Learning
+# 🎓 AI Student Performance Prediction System
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
-![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
-![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
+### 🚀 Predict • Analyze • Improve using Machine Learning
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/FastAPI-0.115-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/Python-3.12-FFD43B?style=for-the-badge&logo=python&logoColor=blue"/>
+
+<img src="https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/Scikit--Learn-Random%20Forest-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white"/>
+
+<img src="https://img.shields.io/github/license/anixlevi/AI_Student_Performance_Prediction?style=for-the-badge"/>
+
+<img src="https://img.shields.io/github/stars/anixlevi/AI_Student_Performance_Prediction?style=for-the-badge"/>
+
+</p>
+
+### 💡 A Full Stack AI-powered Educational Analytics Platform
+
+Predict student academic performance using Machine Learning, manage student records, visualize analytics, and generate intelligent reports through an interactive dashboard.
 
 </div>
 
 ---
 
-An AI-powered web application that predicts student academic performance using Machine Learning and provides an interactive dashboard for student management, analytics, and performance reporting.
+# 🌍 Live Demo
+
+| Application | Link |
+|-------------|------|
+| 🌐 Frontend | https://ai-student-performance-prediction-pi.vercel.app |
+| ⚙️ Backend API | https://anix-ai-student-performance-prediction.onrender.com |
+| 📘 Swagger API Docs | https://anix-ai-student-performance-prediction.onrender.com/docs |
 
 ---
 
-## 📖 Project Description
+# 📖 Project Description
 
-The AI Student Performance Prediction System is a full-stack web application designed to help educational institutions predict students' academic performance using Artificial Intelligence and Machine Learning.
+The **AI Student Performance Prediction System** is a Full Stack Machine Learning web application developed to help educational institutions analyze and predict student academic performance.
 
-The system collects academic information such as attendance, study hours, previous marks, assignment marks, and internal marks. Using a trained Random Forest Machine Learning model, it predicts the student's expected final marks.
+The system collects important academic information such as attendance, study hours, previous marks, assignment marks, and internal marks. A trained **Random Forest Regression** model processes this information to predict the student's expected final marks.
 
-The application also includes a modern dashboard for student registration, data management, prediction analysis, charts, and downloadable reports.
+Apart from AI prediction, the application provides a complete student management solution featuring student registration, authentication, dashboards, analytics, downloadable reports, and performance visualization.
 
-This project demonstrates the integration of Machine Learning with a React frontend, FastAPI backend, and MySQL database to build a real-world educational analytics platform.
+This project demonstrates how **Machine Learning**, **FastAPI**, **React**, and **MySQL** can be integrated into a real-world educational analytics platform.
+
 ---
 
-## ✨ Features
+# ⭐ Project Highlights
 
-- 👨‍🎓 Student Registration and Management
-- 🤖 AI-Based Student Performance Prediction
-- 📊 Interactive Dashboard with Charts
-- 📈 Student Performance Analytics
-- 📋 Student Records Management
+- 🤖 AI Powered Student Performance Prediction
+- 📊 Interactive Dashboard & Analytics
+- 👨‍🎓 Complete Student Management System
+- ⚡ FastAPI REST API
+- 🎯 Random Forest Regression Model
 - 📄 Downloadable Prediction Reports
-- 🔍 Search and Filter Students
-- 💻 Responsive User Interface
-- ⚡ FastAPI REST API Integration
+- 🔍 Search & Filter Students
+- 📱 Responsive React Interface
 - 🗄️ MySQL Database Integration
-- 🌐 Modern React + Vite Frontend
+- ☁️ Live Deployment using Vercel & Render
+
+---
+
+# ✨ Features
+
+- 👨‍🎓 Student Registration
+- 🔐 Secure Login System
+- 📊 Dashboard with Charts
+- 🤖 AI Prediction Module
+- 📈 Performance Analytics
+- 📋 Student Management
+- 🔍 Search & Filter Records
+- 📄 PDF Report Generation
+- 📉 Prediction History
+- 📱 Fully Responsive Design
+- ⚡ REST API Integration
+- ☁️ Cloud Deployment
+
 ---
 
 # 🛠️ Tech Stack
 
-## Frontend
+## 🎨 Frontend
+
 - React.js
 - Vite
 - Bootstrap 5
@@ -55,13 +98,19 @@ This project demonstrates the integration of Machine Learning with a React front
 - React Router DOM
 - Recharts
 
-## Backend
+---
+
+## ⚙️ Backend
+
 - FastAPI
 - SQLAlchemy
 - Pydantic
 - Uvicorn
 
-## Machine Learning
+---
+
+## 🤖 Machine Learning
+
 - Python
 - Scikit-learn
 - Random Forest Regressor
@@ -69,18 +118,22 @@ This project demonstrates the integration of Machine Learning with a React front
 - NumPy
 - Joblib
 
-## Database
+---
+
+## 🗄️ Database
+
 - MySQL
 
-## Version Control
+---
+
+## 💻 Development Tools
+
+- Visual Studio Code
+- Postman
 - Git
 - GitHub
 
-## Development Tools
-- Visual Studio Code
-- Postman
 ---
-
 # 📁 Project Structure
 
 ```text
@@ -89,289 +142,572 @@ AI_Student_Performance_Prediction/
 ├── Backend/
 │   ├── app/
 │   ├── database/
-│   │   ├── __init__.py
-│   │   └── database.py
 │   ├── Dataset/
-│   │   ├── student_performance.csv
-│   │   ├── student_performance_backup.csv
-│   │   └── add_noise.py
 │   ├── models/
-│   │   ├── base.py
-│   │   ├── student.py
-│   │   └── user.py
 │   ├── routes/
-│   │   ├── auth.py
-│   │   └── student.py
 │   ├── schemas/
-│   │   ├── predict.py
-│   │   ├── student.py
-│   │   └── user.py
 │   ├── services/
 │   ├── train_model/
-│   │   └── train.py
 │   ├── ml_model/
-│   │   └── model_loader.py
 │   ├── uploads/
 │   ├── utils/
 │   ├── .env
-│   ├── .gitignore
-│   ├── create_admin.py
-│   ├── create_demo_user.py
-│   ├── main.py
 │   ├── requirements.txt
+│   ├── main.py
 │   └── student_model.pkl
 │
 ├── Frontend/
-│   ├── src/
 │   ├── public/
+│   ├── src/
 │   ├── package.json
 │   └── vite.config.js
 │
+├── screenshots/
+│
 └── README.md
 ```
+
+---
+
+# 📦 Project Modules
+
+| Module | Description |
+|----------|-------------|
+| 🔐 Authentication | User Login & Authentication |
+| 👨‍🎓 Student Management | Register, Update & Manage Students |
+| 🤖 AI Prediction | Predict Student Final Marks |
+| 📊 Dashboard | Charts & Student Analytics |
+| 📄 Report Generation | Download Student Prediction Report |
+| 🔍 Search & Filter | Find Student Records Instantly |
+| ⚡ REST API | FastAPI Backend Services |
+| 🧠 Machine Learning | Random Forest Prediction Engine |
+
 ---
 
 # 🤖 Machine Learning Model
 
-This project uses the **Random Forest Regressor** algorithm from **Scikit-learn** to predict students' final academic performance based on their academic records.
+The prediction engine is built using the **Random Forest Regressor** algorithm provided by **Scikit-learn**.
 
-## Input Features
+The model learns patterns from historical student academic records and predicts the expected final marks for new students.
 
-The model is trained using the following student attributes:
+Unlike traditional statistical models, Random Forest combines multiple decision trees to produce more stable and accurate predictions while minimizing overfitting.
 
+---
+
+## 🎯 Input Features
+
+The prediction model uses the following academic attributes:
+
+| Feature | Description |
+|----------|-------------|
+| Age | Student Age |
+| Attendance | Attendance Percentage |
+| Study Hours | Average Daily Study Hours |
+| Previous Marks | Previous Examination Marks |
+| Assignment Marks | Assignment Performance |
+| Internal Marks | Internal Assessment Marks |
+
+---
+
+## 🎯 Target Variable
+
+The trained Machine Learning model predicts:
+
+> **Expected Final Marks**
+
+---
+
+## ⚙️ Machine Learning Workflow
+
+```text
+Dataset
+
+      │
+
+      ▼
+
+Data Cleaning
+
+      │
+
+      ▼
+
+Feature Selection
+
+      │
+
+      ▼
+
+Train-Test Split
+
+      │
+
+      ▼
+
+Random Forest Training
+
+      │
+
+      ▼
+
+Model Evaluation
+
+      │
+
+      ▼
+
+Save Model (.pkl)
+
+      │
+
+      ▼
+
+FastAPI Backend
+
+      │
+
+      ▼
+
+Prediction Result
+```
+
+---
+
+# 📂 Dataset Information
+
+The project uses a structured dataset containing academic records of students.
+
+| Property | Value |
+|-----------|-------|
+| Dataset Type | CSV |
+| Total Records | 50 Students |
+| Input Features | 6 |
+| Target Variable | Final Marks |
+| Missing Values | None |
+| Train/Test Split | 80% / 20% |
+
+---
+
+### Dataset Columns
+
+- Name
 - Age
-- Attendance (%)
+- Gender
+- Attendance
 - Study Hours
 - Previous Marks
 - Assignment Marks
 - Internal Marks
+- Final Marks
+- Result
 
-## Output
-
-The trained model predicts the student's **Expected Final Marks**.
-
-## Model Workflow
-
-1. Load the student dataset.
-2. Preprocess and clean the data.
-3. Select input features and target variable.
-4. Train the Random Forest Regressor model.
-5. Save the trained model using Joblib.
-6. Load the model in the FastAPI backend.
-7. Generate predictions for new student records.
-
-## Libraries Used
-
-- Scikit-learn
-- Pandas
-- NumPy
-- Joblib
-
-## Why Random Forest?
-
-- High prediction accuracy
-- Handles non-linear relationships
-- Reduces overfitting
-- Works well with structured datasets
-- Provides stable and reliable predictions
 ---
-## 📊 Model Performance
 
-The model was evaluated on a held-out test set (80/20 train-test split):
+# 📊 Model Performance
+
+The Machine Learning model was evaluated using an 80/20 Train-Test split.
 
 | Metric | Score |
-|--------|-------|
+|----------|--------|
+| Algorithm | Random Forest Regressor |
 | R² Score | 0.89 |
-| Mean Absolute Error (MAE) | ±4.48 marks |
+| Mean Absolute Error (MAE) | ±4.48 Marks |
 
-**Feature Importance:**
-- Assignment Marks — 43.1%
-- Previous Marks — 22.5%
-- Internal Marks — 21.3%
-- Attendance — 6.7%
-- Study Hours — 5.9%
-- Age — 0.4%
 ---
-# ⚙️ System Architecture
+
+## 📈 Feature Importance
+
+| Feature | Importance |
+|----------|------------|
+| Assignment Marks | 43.1% |
+| Previous Marks | 22.5% |
+| Internal Marks | 21.3% |
+| Attendance | 6.7% |
+| Study Hours | 5.9% |
+| Age | 0.4% |
+
+---
+
+# 🎯 Example Prediction
+
+### Input
+
+| Feature | Value |
+|----------|------:|
+| Age | 20 |
+| Attendance | 92% |
+| Study Hours | 5 |
+| Previous Marks | 81 |
+| Assignment Marks | 85 |
+| Internal Marks | 78 |
+
+↓
+
+### AI Output
 
 ```text
-                    +----------------------+
-                    |      React.js UI     |
-                    |   (Frontend - Vite)  |
-                    +----------+-----------+
-                               |
-                               | REST API (Axios)
-                               ▼
-                    +----------------------+
-                    |   FastAPI Backend    |
-                    |  (Business Logic)    |
-                    +----------+-----------+
-                               |
-               +---------------+---------------+
-               |                               |
-               ▼                               ▼
-      +------------------+           +----------------------+
-      | Machine Learning |           |     MySQL Database   |
-      | Random Forest    |           | Student Information  |
-      +------------------+           +----------------------+
-               |
-               ▼
-      +----------------------+
-      | Prediction Result    |
-      | Dashboard & Reports  |
-      +----------------------+
+Predicted Final Marks
+
+84.23
 ```
 
-## 🔄 Application Workflow
+The predicted marks are stored in the database and displayed instantly on the dashboard.
 
-1. User enters student details through the React frontend.
-2. The frontend sends the data to the FastAPI backend using REST APIs.
-3. The backend validates the input data.
-4. The trained Random Forest model processes the input.
-5. The predicted final marks are generated.
-6. Prediction results are stored in the MySQL database.
-7. The dashboard displays analytics, charts, and reports.
 ---
 
+# 🏗️ System Architecture
+
+```text
+                     +-----------------------+
+                     |     React Frontend    |
+                     |      (Vite + React)   |
+                     +-----------+-----------+
+                                 |
+                                 |
+                          Axios REST API
+                                 |
+                                 ▼
+                    +------------------------+
+                    |    FastAPI Backend     |
+                    | Business Logic & APIs  |
+                    +-----------+------------+
+                                |
+                +---------------+---------------+
+                |                               |
+                ▼                               ▼
+      +----------------------+      +----------------------+
+      | Machine Learning     |      |   MySQL Database     |
+      | Random Forest Model  |      | Student Information  |
+      +----------------------+      +----------------------+
+                |
+                ▼
+      +------------------------+
+      | Prediction Result      |
+      | Dashboard & Reports    |
+      +------------------------+
+```
+
+---
+
+# 🔄 Application Workflow
+
+```text
+Student
+
+      │
+
+      ▼
+
+Register Student
+
+      │
+
+      ▼
+
+Store Student Data
+
+      │
+
+      ▼
+
+Prediction Request
+
+      │
+
+      ▼
+
+FastAPI Backend
+
+      │
+
+      ▼
+
+Random Forest Model
+
+      │
+
+      ▼
+
+Predicted Marks
+
+      │
+
+      ▼
+
+Dashboard Analytics
+
+      │
+
+      ▼
+
+Download Report
+```
+
+---
+
+# 💡 Why Random Forest?
+
+✔ High Prediction Accuracy
+
+✔ Handles Non-linear Data
+
+✔ Reduces Overfitting
+
+✔ Stable Predictions
+
+✔ Works Well with Educational Datasets
+
+✔ Easy to Train & Deploy
+
+---
 # 🚀 Installation Guide
 
-An intelligent platform that uses Machine Learning to analyze student performance and predict future academic results.
-
-## 🌐 Live Demo
-
-- **Frontend (Vercel):** https://ai-student-performance-prediction-pi.vercel.app
-- **Backend API (Render):** https://anix-ai-student-performance-prediction.onrender.com
-- **API Documentation (Swagger UI):** https://anix-ai-student-performance-prediction.onrender.com/docs
+Follow these steps to set up and run the project locally.
 
 ---
 
-## 🚀 Installation Guide (Run Locally)
+## 📋 Prerequisites
 
-Follow these steps to run the project on your local machine.
+Before starting, make sure the following software is installed on your system:
 
-### 1️⃣ Clone the Repository
+- Python 3.12+
+- Node.js (Latest LTS Version)
+- npm
+- MySQL Server 8+
+- Git
+- Visual Studio Code (Recommended)
+
+---
+
+# 📥 Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/AI_Student_Performance_Prediction.git
+git clone https://github.com/anixlevi/AI_Student_Performance_Prediction.git
 ```
 
-Replace `YOUR_GITHUB_USERNAME` with your actual GitHub username.
+Move into the project folder:
 
-### 2️⃣ Backend Setup
+```bash
+cd AI_Student_Performance_Prediction
+```
 
-Navigate to the backend folder:
+---
+
+# ⚙️ Backend Setup
+
+Navigate to the backend folder.
 
 ```bash
 cd Backend
 ```
 
-Create a virtual environment:
+### Create Virtual Environment
 
 ```bash
 python -m venv .venv
 ```
 
-Activate the virtual environment:
+### Activate Virtual Environment
 
-**Windows**
+### Windows
+
 ```bash
 .venv\Scripts\activate
 ```
 
-**Linux / macOS**
+### Linux / macOS
+
 ```bash
 source .venv/bin/activate
 ```
 
-Install dependencies:
+---
+
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Start the FastAPI server:
+---
+
+### Configure Environment Variables
+
+Create a `.env` file inside the **Backend** folder.
+
+Example:
+
+```env
+DB_HOST=localhost
+DB_PORT=3306
+DB_NAME=student_prediction_db
+DB_USER=root
+DB_PASSWORD=your_password
+```
+
+---
+
+### Run FastAPI Server
 
 ```bash
 uvicorn main:app --reload
 ```
 
-Backend will run on:
+Backend will start at:
 
-### 3️⃣ Frontend Setup
+```
+http://127.0.0.1:8000
+```
 
-Open another terminal and navigate to the frontend folder:
+Swagger Documentation:
+
+```
+http://127.0.0.1:8000/docs
+```
+
+---
+
+# 🎨 Frontend Setup
+
+Open another terminal.
 
 ```bash
 cd Frontend
 ```
 
-Install dependencies:
+Install dependencies.
 
 ```bash
 npm install
 ```
 
-Create a `.env` file inside the `Frontend` folder and add:
+Create a `.env` file.
 
-Start the React application:
+```env
+VITE_API_URL=http://127.0.0.1:8000
+```
+
+Run the development server.
 
 ```bash
 npm run dev
 ```
 
-Frontend will run on:
+Frontend will run at
 
-### 4️⃣ Database Setup
-
-- Install MySQL Server.
-- Create a database named:
-- Update your database configuration in the backend `.env` file.
-- Import the student dataset if required.
-
-### 5️⃣ Access the Application (Local)
-
-- **Frontend:** http://localhost:5173
-- **Backend API:** http://127.0.0.1:8000
-- **FastAPI Documentation:** http://127.0.0.1:8000/docs
+```
+http://localhost:5173
+```
 
 ---
 
-## ☁️ Deployment
+# 🗄️ Database Setup
 
-This project is deployed using:
+1. Install MySQL Server.
+2. Create a database.
 
-- **Frontend:** [Vercel](https://vercel.com) — deployed from the `Frontend` folder as the root directory.
-- **Backend:** [Render](https://render.com) — deployed as a Python web service running the FastAPI app via `uvicorn`.
+```sql
+CREATE DATABASE student_prediction_db;
+```
 
-Environment variables used in production:
-
-| Platform | Variable | Purpose |
-|----------|----------|---------|
-| Vercel | `VITE_API_URL` | Points frontend to the live Render backend URL |
-| Render | Database credentials | MySQL connection details for production database |
+3. Update database credentials inside the Backend `.env` file.
+4. Import the provided student dataset if required.
+5. Start the FastAPI server.
 
 ---
 
-## 📡 API Endpoints
+# 🌍 Local URLs
 
-The backend is built using FastAPI and provides RESTful APIs for managing students and predicting academic performance.
+| Service | URL |
+|----------|-----|
+| React Frontend | http://localhost:5173 |
+| FastAPI Backend | http://127.0.0.1:8000 |
+| Swagger API | http://127.0.0.1:8000/docs |
+| ReDoc | http://127.0.0.1:8000/redoc |
+
+---
+
+# ☁️ Deployment
+
+The project is deployed using modern cloud platforms.
+
+| Platform | Purpose |
+|-----------|---------|
+| Vercel | React Frontend |
+| Render | FastAPI Backend |
+| MySQL | Database |
+| GitHub | Version Control |
+
+---
+
+## 🌐 Live Application
+
+### Frontend
+
+https://ai-student-performance-prediction-pi.vercel.app
+
+### Backend API
+
+https://anix-ai-student-performance-prediction.onrender.com
+
+### Swagger Documentation
+
+https://anix-ai-student-performance-prediction.onrender.com/docs
+
+---
+
+# 🔐 Environment Variables
+
+## Frontend (.env)
+
+```env
+VITE_API_URL=https://anix-ai-student-performance-prediction.onrender.com
+```
+
+---
+
+## Backend (.env)
+
+```env
+DB_HOST=localhost
+DB_PORT=3306
+DB_NAME=student_prediction_db
+DB_USER=root
+DB_PASSWORD=your_password
+```
+
+---
+
+# 📡 REST API Endpoints
 
 | Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/register` | Register a new student |
-| GET | `/students` | Retrieve all registered students |
-| GET | `/student/{id}` | Get details of a specific student |
-| POST | `/predict` | Predict student final marks using the AI model |
-| GET | `/download-report/{student_id}` | Download the student's prediction report |
+|----------|----------|-------------|
+| POST | `/register` | Register New Student |
+| POST | `/login` | User Login |
+| GET | `/students` | Fetch All Students |
+| GET | `/student/{id}` | Student Details |
+| PUT | `/student/{id}` | Update Student |
+| DELETE | `/student/{id}` | Delete Student |
+| POST | `/predict` | Predict Final Marks |
+| GET | `/download-report/{id}` | Download Student Report |
 
-## 🔍 API Documentation
+---
 
-FastAPI automatically generates interactive API documentation.
+# 📘 API Documentation
 
-- **Swagger UI:** https://anix-ai-student-performance-prediction.onrender.com/docs
-- **ReDoc:** https://anix-ai-student-performance-prediction.onrender.com/redoc
+FastAPI automatically generates interactive documentation.
 
-## 📥 Example Prediction Request
+### Swagger UI
+
+https://anix-ai-student-performance-prediction.onrender.com/docs
+
+### ReDoc
+
+https://anix-ai-student-performance-prediction.onrender.com/redoc
+
+---
+
+# 📥 Sample Prediction Request
 
 ```json
 {
@@ -384,51 +720,153 @@ FastAPI automatically generates interactive API documentation.
 }
 ```
 
-## 📤 Example Prediction Response
+---
+
+# 📤 Sample Prediction Response
 
 ```json
 {
   "predicted_marks": 84.23
 }
 ```
-# 📝 Create Account (Signup)
-
-![Signup](screenshots/Signup.png)
-
----
-# 🔐 Login
-
-![Login](screenshots/login.png)
 
 ---
 
-# 📸 Project Screenshots
+# 🔄 Prediction Process
+
+```text
+Student Details
+
+        │
+
+        ▼
+
+React Frontend
+
+        │
+
+        ▼
+
+Axios API Request
+
+        │
+
+        ▼
+
+FastAPI Backend
+
+        │
+
+        ▼
+
+Random Forest Model
+
+        │
+
+        ▼
+
+Predicted Marks
+
+        │
+
+        ▼
+
+Database Storage
+
+        │
+
+        ▼
+
+Dashboard + Report Generation
+```
+
+---
+
+# 📈 API Flow
+
+```text
+React UI
+    │
+    ▼
+Axios Request
+    │
+    ▼
+FastAPI
+    │
+    ├──────────────► MySQL Database
+    │
+    └──────────────► Machine Learning Model
+                          │
+                          ▼
+                  Prediction Response
+```
+
+---
+# 📸 Application Screenshots
+
+The following screenshots showcase the key modules of the application.
+
+---
 
 ## 🏠 Home Page
+
+The landing page provides an overview of the AI Student Performance Prediction System along with its features and workflow.
 
 ![Home](screenshots/Home.png)
 
 ---
 
-## 👨‍🎓 Student Registration
+## 📝 Student Registration
+
+Students can be registered by entering academic information into an easy-to-use form.
 
 ![Register](screenshots/Register.png)
 
 ---
 
+## 🔐 Login Page
+
+Secure authentication allows authorized users to access the dashboard.
+
+![Login](screenshots/login.png)
+
+---
+
+## 👤 User Signup
+
+New users can create an account before accessing the application.
+
+![Signup](screenshots/Signup.png)
+
+---
+
 ## 📊 Dashboard
+
+The dashboard displays overall student statistics, charts, prediction summaries, and performance analytics.
+
+Features include:
+
+- Total Students
+- Average Marks
+- Attendance Overview
+- Top Performing Students
+- Interactive Charts
 
 ![Dashboard](screenshots/Dashboard.png)
 
 ---
 
-## 🤖 Prediction Page
+## 🤖 AI Prediction
+
+The prediction module uses the trained Random Forest model to estimate a student's expected final marks.
 
 ![Prediction](screenshots/Prediction.png)
 
 ---
 
-## 👥 Student Management
+## 👨‍🎓 Student Management
+
+Manage student records with powerful search and filtering capabilities.
 
 ![Students](screenshots/Student.png)
 
@@ -436,45 +874,187 @@ FastAPI automatically generates interactive API documentation.
 
 ## 📄 Prediction Report
 
+Generate and download prediction reports for future reference.
+
 ![Report](screenshots/Report.png)
+
 ---
 
-# 🚀 Future Scope
+# 🎯 Project Achievements
 
-The AI Student Performance Prediction System can be enhanced with several advanced features in future releases:
+✅ Full Stack Web Application
 
-- 🤖 Deep Learning models for improved prediction accuracy.
-- 📱 Mobile application for Android and iOS.
-- 👨‍🏫 Faculty and Student Login Portal.
-- 📧 Email and SMS notifications for performance reports.
-- 📊 Advanced analytics and interactive visualizations.
-- ☁️ Cloud deployment using AWS, Azure, or Google Cloud.
-- 🔒 Role-based authentication and authorization.
-- 📚 Personalized learning recommendations based on AI predictions.
-- 📈 Real-time performance monitoring dashboard.
-- 🌍 Multi-language support for wider accessibility.
+✅ Machine Learning Integration
+
+✅ AI-Based Prediction System
+
+✅ FastAPI REST APIs
+
+✅ Responsive React Interface
+
+✅ MySQL Database
+
+✅ Interactive Dashboard
+
+✅ PDF Report Generation
+
+✅ Live Deployment
+
 ---
-## 🔑 Demo Login Credentials
 
-A read-only demo account is available so reviewers can explore the app without registering.
+# 🚀 Future Enhancements
 
-| Username    | Password       |
-| ----------- | -------------- |
-| **demo**    | **Demo@1234**  |
+The project can be further enhanced with modern AI and cloud technologies.
 
-> ⚠️ **Note:** This is a dedicated demo account with limited/read-only permissions, seeded with sample data only. It is not linked to any real user or production data.
+### Artificial Intelligence
+
+- Explainable AI (SHAP / LIME)
+- Deep Learning Models
+- Ensemble Learning
+- Personalized Learning Recommendations
+
+---
+
+### Security
+
+- JWT Authentication
+- Password Encryption
+- Role-Based Authorization
+- Two-Factor Authentication
+
+---
+
+### Dashboard
+
+- Real-Time Analytics
+- Advanced Filtering
+- Performance Comparison
+- Student Ranking System
+
+---
+
+### Cloud
+
+- Docker Containerization
+- GitHub Actions CI/CD
+- AWS Deployment
+- Azure Deployment
+- Google Cloud Deployment
+
+---
+
+### Additional Features
+
+- Email Notifications
+- SMS Alerts
+- Mobile Application
+- Multi-language Support
+- Attendance Tracking
+- Teacher Portal
+- Student Portal
+
+---
+
+# 🔑 Demo Login Credentials
+
+A demo account has been provided for reviewers and recruiters.
+
+| Username | Password |
+|----------|----------|
+| **demo** | **Demo@1234** |
+
+> **Note:** This account contains sample data only and has limited access.
+
+---
+
+# 📊 Project Statistics
+
+| Category | Details |
+|----------|----------|
+| Frontend | React + Vite |
+| Backend | FastAPI |
+| Machine Learning | Random Forest Regressor |
+| Database | MySQL |
+| Charts | Recharts |
+| Deployment | Vercel + Render |
+| Report Generation | PDF |
+| Authentication | Username & Password |
+
+---
+
+# 🤝 Contributing
+
+Contributions are always welcome.
+
+If you'd like to improve this project:
+
+1. Fork the repository.
+2. Create a new feature branch.
+3. Commit your changes.
+4. Push to your branch.
+5. Open a Pull Request.
+
+---
+
+# ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
+
+It helps others discover the project and motivates future development.
+
 ---
 
 # 👨‍💻 Author
 
-**Aniket Singh**
+## Aniket Singh
 
-🎓 Master of Computer Applications (MCA)
+**Master of Computer Applications (MCA)**
 
-💡 Passionate about Artificial Intelligence, Machine Learning, and Full Stack Web Development.
+Passionate about:
+
+- Artificial Intelligence
+- Machine Learning
+- Full Stack Development
+- FastAPI
+- React
+- Python
+
+---
 
 ## 📬 Connect with Me
 
-- GitHub: [(https://github.com/anixlevi/AI_Student_Performance_Prediction)]
-- LinkedIn: [(https://www.linkedin.com/in/aniket-singh-439819389/)]
-- Email: an1ket0s1ngh000@gmail.com
+### GitHub
+
+https://github.com/anixlevi
+
+---
+
+### LinkedIn
+
+https://www.linkedin.com/in/aniket-singh-439819389/
+
+---
+
+### Email
+
+an1ket0s1ngh000@gmail.com
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+You are free to use, modify, and distribute this project in accordance with the terms of the license.
+
+---
+
+<div align="center">
+
+## ⭐ Thank You for Visiting ⭐
+
+If you like this project, don't forget to **Star ⭐ the Repository**.
+
+Made by **Aniket Singh**
+
+</div>
