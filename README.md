@@ -588,22 +588,6 @@ The following screenshots showcase the key modules of the application.
 
 ---
 
-## 🏠 Home Page
-
-The landing page provides an overview of the AI Student Performance Prediction System along with its features and workflow.
-
-![Home](screenshots/Home.png)
-
----
-
-## 📝 Student Registration
-
-Students can be registered by entering academic information into an easy-to-use form.
-
-![Register](screenshots/Register.png)
-
----
-
 ## 🔐 Login Page
 
 Secure authentication allows authorized users to access the dashboard.
@@ -618,6 +602,21 @@ New users can create an account before accessing the application.
 
 ![Signup](screenshots/Signup.png)
 
+---
+
+## 🏠 Home Page
+
+The landing page provides an overview of the AI Student Performance Prediction System along with its features and workflow.
+
+![Home](screenshots/Home.png)
+
+---
+
+## 📝 Student Registration
+
+Students can be registered by entering academic information into an easy-to-use form.
+
+![Register](screenshots/Register.png)
 ---
 
 ## 📊 Dashboard
@@ -644,19 +643,18 @@ The prediction module uses the trained Random Forest model to estimate a student
 
 ---
 
-## 👨‍🎓 Student Management
-
-Manage student records with powerful search and filtering capabilities.
-
-![Students](screenshots/Student.png)
-
----
-
 ## 📄 Prediction Report
 
 Generate and download prediction reports for future reference.
 
 ![Report](screenshots/Report.png)
+
+---
+## 👨‍🎓 Student Management
+
+Manage student records with powerful search and filtering capabilities.
+
+![Students](screenshots/Student.png)
 
 ---
 
