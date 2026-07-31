@@ -2,7 +2,7 @@
 
 <img src="https://img.icons8.com/fluency/96/graduation-cap.png" width="90" alt="logo"/>
 
-# 🎓 AI Student Performance Prediction System
+# Λ𝙸 𝚂𝚝𝚞𝚍𝚎𝚗𝚝 𝙿𝚎𝚛𝚏𝚘𝚛𝚖𝚊𝚗𝚌𝚎 𝙿𝚛𝚎𝚍𝚒𝚌𝚝𝚒𝚘𝚗 𝚂𝚢𝚜𝚝𝚎𝚖
 
 ### 🚀 Predict • Analyze • Improve using Machine Learning
 
@@ -217,62 +217,35 @@ The trained Machine Learning model predicts:
 
 ---
 
-## ⚙️ Machine Learning Workflow
+# ⚙️ Machine Learning Workflow
 
-```text
-Dataset
+```mermaid
+flowchart TD
 
-      │
+A["📂 Dataset"]
+--> B["🧹 Data Cleaning"]
 
-      ▼
+B
+--> C["🎯 Feature Selection"]
 
-Data Cleaning
+C
+--> D["✂️ Train/Test Split"]
 
-      │
+D
+--> E["🌲 Random Forest Model"]
 
-      ▼
+E
+--> F["📊 Evaluate Model"]
 
-Feature Selection
+F
+--> G["💾 Export Model (.pkl)"]
 
-      │
+G
+--> H["⚡ FastAPI Backend"]
 
-      ▼
-
-Train-Test Split
-
-      │
-
-      ▼
-
-Random Forest Training
-
-      │
-
-      ▼
-
-Model Evaluation
-
-      │
-
-      ▼
-
-Save Model (.pkl)
-
-      │
-
-      ▼
-
-FastAPI Backend
-
-      │
-
-      ▼
-
-Prediction Result
+H
+--> I["🤖 Predict Student Marks"]
 ```
-
----
-
 # 📂 Dataset Information
 
 The project uses a structured dataset containing academic records of students.
@@ -287,21 +260,29 @@ The project uses a structured dataset containing academic records of students.
 | Train/Test Split | 80% / 20% |
 
 ---
+# Dataset Columns
 
-### Dataset Columns
+<p align="center">
 
-- Name
-- Age
-- Gender
-- Attendance
-- Study Hours
-- Previous Marks
-- Assignment Marks
-- Internal Marks
-- Final Marks
-- Result
+![Name](https://img.shields.io/badge/Name-Student-blue?style=for-the-badge)
+![Age](https://img.shields.io/badge/Age-Years-green?style=for-the-badge)
+![Gender](https://img.shields.io/badge/Gender-Male/Female-purple?style=for-the-badge)
+![Attendance](https://img.shields.io/badge/Attendance-%25-orange?style=for-the-badge)
 
----
+<br>
+
+![Study Hours](https://img.shields.io/badge/Study_Hours-Hours-red?style=for-the-badge)
+![Previous Marks](https://img.shields.io/badge/Previous_Marks-Score-blueviolet?style=for-the-badge)
+![Assignment Marks](https://img.shields.io/badge/Assignment_Marks-Score-success?style=for-the-badge)
+
+<br>
+
+![Internal Marks](https://img.shields.io/badge/Internal_Marks-Score-yellow?style=for-the-badge)
+![Final Marks](https://img.shields.io/badge/Final_Marks-Score-critical?style=for-the-badge)
+![Result](https://img.shields.io/badge/Result-Pass/Fail-brightgreen?style=for-the-badge)
+
+</p>
+
 
 # 📊 Model Performance
 
@@ -391,268 +372,81 @@ The predicted marks are stored in the database and displayed instantly on the da
 
 # 🔄 Application Workflow
 
-```text
-Student
+```mermaid
+flowchart TD
 
-      │
+A[👨‍🎓 Student Registration]
+B[(🗄️ MySQL Database)]
+C[⚙️ FastAPI Backend]
+D[🤖 Random Forest Model]
+E[📊 Prediction Result]
+F[📄 Generate Report]
+G[📈 Dashboard Analytics]
 
-      ▼
-
-Register Student
-
-      │
-
-      ▼
-
-Store Student Data
-
-      │
-
-      ▼
-
-Prediction Request
-
-      │
-
-      ▼
-
-FastAPI Backend
-
-      │
-
-      ▼
-
-Random Forest Model
-
-      │
-
-      ▼
-
-Predicted Marks
-
-      │
-
-      ▼
-
-Dashboard Analytics
-
-      │
-
-      ▼
-
-Download Report
+A --> B
+B --> C
+C --> D
+D --> E
+E --> F
+E --> G
 ```
+# 🌲 Why Random Forest?
+
+| ✅ Benefit | 📌 Reason |
+|-----------|-----------|
+| High Accuracy | Provides reliable predictions for student performance |
+| Less Overfitting | Combines multiple decision trees |
+| Handles Complex Data | Learns non-linear relationships effectively |
+| Fast Prediction | Generates results instantly |
+| Robust Model | Performs well on educational datasets |
 
 ---
 
-# 💡 Why Random Forest?
-
-✔ High Prediction Accuracy
-
-✔ Handles Non-linear Data
-
-✔ Reduces Overfitting
-
-✔ Stable Predictions
-
-✔ Works Well with Educational Datasets
-
-✔ Easy to Train & Deploy
-
----
-# 🚀 Installation Guide
-
-Follow these steps to set up and run the project locally.
-
----
-
-## 📋 Prerequisites
-
-Before starting, make sure the following software is installed on your system:
-
-- Python 3.12+
-- Node.js (Latest LTS Version)
-- npm
-- MySQL Server 8+
-- Git
-- Visual Studio Code (Recommended)
-
----
-
-# 📥 Clone the Repository
+# 🚀 Installation
 
 ```bash
+# Clone Repository
 git clone https://github.com/anixlevi/AI_Student_Performance_Prediction.git
-```
-
-Move into the project folder:
-
-```bash
 cd AI_Student_Performance_Prediction
 ```
 
----
-
-# ⚙️ Backend Setup
-
-Navigate to the backend folder.
-
 ```bash
+# Backend
 cd Backend
-```
-
-### Create Virtual Environment
-
-```bash
 python -m venv .venv
-```
-
-### Activate Virtual Environment
-
-### Windows
-
-```bash
 .venv\Scripts\activate
-```
-
-### Linux / macOS
-
-```bash
-source .venv/bin/activate
-```
-
----
-
-### Install Dependencies
-
-```bash
 pip install -r requirements.txt
-```
-
----
-
-### Configure Environment Variables
-
-Create a `.env` file inside the **Backend** folder.
-
-Example:
-
-```env
-DB_HOST=localhost
-DB_PORT=3306
-DB_NAME=student_prediction_db
-DB_USER=root
-DB_PASSWORD=your_password
-```
-
----
-
-### Run FastAPI Server
-
-```bash
 uvicorn main:app --reload
 ```
 
-Backend will start at:
-
-```
-http://127.0.0.1:8000
-```
-
-Swagger Documentation:
-
-```
-http://127.0.0.1:8000/docs
-```
-
----
-
-# 🎨 Frontend Setup
-
-Open another terminal.
-
 ```bash
+# Frontend
 cd Frontend
-```
-
-Install dependencies.
-
-```bash
 npm install
-```
-
-Create a `.env` file.
-
-```env
-VITE_API_URL=http://127.0.0.1:8000
-```
-
-Run the development server.
-
-```bash
 npm run dev
 ```
 
-Frontend will run at
-
-```
-http://localhost:5173
-```
-
----
-
-# 🗄️ Database Setup
-
-1. Install MySQL Server.
-2. Create a database.
-
-```sql
-CREATE DATABASE student_prediction_db;
-```
-
-3. Update database credentials inside the Backend `.env` file.
-4. Import the provided student dataset if required.
-5. Start the FastAPI server.
-
----
-
-# 🌍 Local URLs
-
 | Service | URL |
-|----------|-----|
-| React Frontend | http://localhost:5173 |
-| FastAPI Backend | http://127.0.0.1:8000 |
-| Swagger API | http://127.0.0.1:8000/docs |
-| ReDoc | http://127.0.0.1:8000/redoc |
+|---------|-----|
+| 🌐 Frontend | http://localhost:5173 |
+| ⚙️ Backend | http://127.0.0.1:8000 |
+| 📘 Swagger | http://127.0.0.1:8000/docs |
 
 ---
 
 # ☁️ Deployment
 
-The project is deployed using modern cloud platforms.
+| Component | Platform |
+|-----------|----------|
+| Frontend | Vercel |
+| Backend | Render |
+| Database | MySQL |
 
-| Platform | Purpose |
-|-----------|---------|
-| Vercel | React Frontend |
-| Render | FastAPI Backend |
-| MySQL | Database |
-| GitHub | Version Control |
+### 🔗 Live Demo
 
----
-
-## 🌐 Live Application
-
-### Frontend
-
-https://ai-student-performance-prediction-pi.vercel.app
-
-### Backend API
-
-https://anix-ai-student-performance-prediction.onrender.com
-
-### Swagger Documentation
-
-https://anix-ai-student-performance-prediction.onrender.com/docs
+- 🌐 Frontend: https://ai-student-performance-prediction-pi.vercel.app
+- ⚙️ Backend: https://anix-ai-student-performance-prediction.onrender.com
+- 📘 API Docs: https://anix-ai-student-performance-prediction.onrender.com/docs
 
 ---
 
@@ -732,75 +526,61 @@ https://anix-ai-student-performance-prediction.onrender.com/redoc
 
 ---
 
-# 🔄 Prediction Process
+# 🔄 Prediction Pipeline
 
-```text
-Student Details
+```mermaid
+graph LR
 
-        │
+A["👨‍🎓 Student"]
+-->B["📝 Input Form"]
 
-        ▼
+B
+-->C["⚛️ React"]
 
-React Frontend
+C
+-->D["📡 REST API"]
 
-        │
+D
+-->E["⚡ FastAPI"]
 
-        ▼
+E
+-->F["🤖 Random Forest"]
 
-Axios API Request
+F
+-->G["📊 Prediction"]
 
-        │
+G
+-->H["📄 PDF"]
 
-        ▼
+G
+-->I["📈 Dashboard"]
 
-FastAPI Backend
-
-        │
-
-        ▼
-
-Random Forest Model
-
-        │
-
-        ▼
-
-Predicted Marks
-
-        │
-
-        ▼
-
-Database Storage
-
-        │
-
-        ▼
-
-Dashboard + Report Generation
+G
+-->J["🗄️ MySQL"]
 ```
+# 📡 API Flow
 
----
+```mermaid
+flowchart LR
 
-# 📈 API Flow
+A["⚛️ React UI"]
+--> B["📡 Axios Request"]
 
-```text
-React UI
-    │
-    ▼
-Axios Request
-    │
-    ▼
-FastAPI
-    │
-    ├──────────────► MySQL Database
-    │
-    └──────────────► Machine Learning Model
-                          │
-                          ▼
-                  Prediction Response
+B
+--> C["⚡ FastAPI"]
+
+C
+--> D[("🗄️ MySQL Database")]
+
+C
+--> E["🤖 Machine Learning Model"]
+
+E
+--> F["📊 Prediction Response"]
+
+F
+--> G["⚛️ React UI"]
 ```
-
 ---
 # 📸 Application Screenshots
 
@@ -1021,40 +801,29 @@ Passionate about:
 
 ---
 
-## 📬 Connect with Me
+# 📬 Connect with Me
 
-### GitHub
+<p align="center">
 
-https://github.com/anixlevi
+<a href="https://github.com/anixlevi">
+<img src="https://img.shields.io/badge/GitHub-anixlevi-181717?style=for-the-badge&logo=github">
+</a>
 
----
+<a href="https://www.linkedin.com/in/aniket-singh-439819389/">
+<img src="https://img.shields.io/badge/LinkedIn-Aniket%20Singh-0A66C2?style=for-the-badge&logo=linkedin">
+</a>
 
-### LinkedIn
+<a href="mailto:an1ket0s1ngh000@gmail.com">
+<img src="https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail">
+</a>
 
-https://www.linkedin.com/in/aniket-singh-439819389/
-
----
-
-### Email
-
-an1ket0s1ngh000@gmail.com
-
----
-
-# 📄 License
-
-This project is licensed under the **MIT License**.
-
-You are free to use, modify, and distribute this project in accordance with the terms of the license.
+</p>
 
 ---
+## 📄 License
 
-<div align="center">
+This project is created for educational and portfolio purposes only.
 
-## ⭐ Thank You for Visiting ⭐
+Unauthorized copying, redistribution, or commercial use of this project without permission is prohibited.
 
-If you like this project, don't forget to **Star ⭐ the Repository**.
-
-Made by **Aniket Singh**
-
-</div>
+© 2026 Aniket Singh. All Rights Reserved.
