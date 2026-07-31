@@ -9,10 +9,15 @@ function Login() {
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
+    const [errorMsg, setErrorMsg] = useState("");
 
     const handleLogin = async (e) => {
 
         e.preventDefault();
+
+        setErrorMsg("");
+        setIsLoading(true);
 
         try {
 
@@ -20,8 +25,6 @@ function Login() {
                 username,
                 password
             });
-
-            alert("Login Successful");
 
             localStorage.setItem(
                 "username",
@@ -35,7 +38,8 @@ function Login() {
 
             console.log(error);
 
-            alert("Login Failed");
+            setErrorMsg("Invalid username or password. Please try again.");
+            setIsLoading(false);
 
         }
 
@@ -93,6 +97,12 @@ function Login() {
                         Login to continue using the AI Student Performance Prediction System
                     </p>
 
+                    {errorMsg && (
+                        <div className="login-error">
+                            ⚠️ {errorMsg}
+                        </div>
+                    )}
+
                     <form onSubmit={handleLogin}>
 
                         <input
@@ -101,6 +111,7 @@ function Login() {
                             className="login-input"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
+                            disabled={isLoading}
                         />
 
                         <input
@@ -109,12 +120,13 @@ function Login() {
                             className="login-input"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
+                            disabled={isLoading}
                         />
 
                         <div className="login-options">
 
                             <label>
-                                <input type="checkbox" /> Remember Me
+                                <input type="checkbox" disabled={isLoading} /> Remember Me
                             </label>
 
                             <a href="#">
@@ -126,8 +138,16 @@ function Login() {
                         <button
                             type="submit"
                             className="login-btn"
+                            disabled={isLoading}
                         >
-                            🔐 Login
+                            {isLoading ? (
+                                <>
+                                    <span className="spinner"></span>
+                                    Logging in...
+                                </>
+                            ) : (
+                                <>🔐 Login</>
+                            )}
                         </button>
 
                     </form>
