@@ -384,6 +384,8 @@
 .status-good{ background:#dbeafe; color:#1d4ed8; }
 .status-average{ background:#fef9c3; color:#a16207; }
 .status-low{ background:#fee2e2; color:#b91c1c; }
+.status-pass{ background:#dcfce7; color:#15803d; }
+.status-fail{ background:#fee2e2; color:#b91c1c; }
 
 
 

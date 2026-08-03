@@ -104,6 +104,24 @@ function PredictionResult(){
 
 
 
+    const getResult = ()=>{
+
+        if(prediction.result){
+
+            return prediction.result;
+
+        }
+
+        return marks >= 40 ? "Pass ✅" : "Fail ❌";
+
+    };
+
+
+
+    const resultTone = marks >= 40 ? "pass" : "fail";
+
+
+
 
 
     const downloadReport = async()=>{
@@ -325,6 +343,24 @@ function PredictionResult(){
 
                     <h1 className={`status-pill status-${status.tone}`}>
                         {status.label}
+                    </h1>
+
+
+                </div>
+
+
+
+
+                <div className="status-box">
+
+
+                    <h2>
+                        Result
+                    </h2>
+
+
+                    <h1 className={`status-pill status-${resultTone}`}>
+                        {getResult()}
                     </h1>
 
 
