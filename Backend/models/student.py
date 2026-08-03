@@ -70,13 +70,13 @@ class Student(Base):
 
     final_marks = Column(
         Float,
-        nullable=False
+        nullable=True
     )
 
 
     result = Column(
         String(20),
-        nullable=False
+        nullable=True
     )
 
 
