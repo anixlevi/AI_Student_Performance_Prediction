@@ -48,6 +48,30 @@ function Students(){
 
 
 
+    const deleteStudent = async(id)=>{
+
+        if(!window.confirm("Delete this student?"))
+            return;
+
+        try{
+
+            await API.delete(
+                `/students/${id}`
+            );
+
+            getStudents();
+
+        }
+        catch(error){
+
+            console.log(error);
+
+        }
+
+    };
+
+
+
 
     const filteredStudents = students.filter(
         
@@ -182,6 +206,11 @@ Prediction
 </th>
 
 
+<th>
+Actions
+</th>
+
+
 </tr>
 
 
@@ -266,6 +295,33 @@ student.predicted_result
 
 }
 
+
+
+</td>
+
+
+
+
+<td>
+
+
+<button
+
+className="btn btn-danger btn-sm"
+
+onClick={()=>
+
+    deleteStudent(
+        student.student_id
+    )
+
+}
+
+>
+
+Delete
+
+</button>
 
 
 </td>
