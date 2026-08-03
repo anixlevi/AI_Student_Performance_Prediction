@@ -15,9 +15,7 @@ const [student,setStudent] = useState({
     study_hours:"",
     previous_marks:"",
     assignment_marks:"",
-    internal_marks:"",
-    final_marks:"",
-    result:""
+    internal_marks:""
 
 });
 
@@ -66,9 +64,7 @@ const handleSubmit=async(e)=>{
             study_hours:"",
             previous_marks:"",
             assignment_marks:"",
-            internal_marks:"",
-            final_marks:"",
-            result:""
+            internal_marks:""
 
         });
 
@@ -273,47 +269,6 @@ name="internal_marks"
 placeholder="Internal Marks"
 
 value={student.internal_marks}
-
-onChange={handleChange}
-
-/>
-
-</div>
-
-
-
-
-<div className="col-md-6 mb-3">
-
-<input
-
-className="form-control"
-
-name="final_marks"
-
-placeholder="Final Marks"
-
-value={student.final_marks}
-
-onChange={handleChange}
-
-/>
-
-</div>
-
-
-
-<div className="col-md-6 mb-3">
-
-<input
-
-className="form-control"
-
-name="result"
-
-placeholder="Result"
-
-value={student.result}
 
 onChange={handleChange}
 
