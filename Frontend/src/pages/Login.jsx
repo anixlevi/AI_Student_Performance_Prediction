@@ -7,7 +7,7 @@ function Login() {
 
     const navigate = useNavigate();
 
-    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [errorMsg, setErrorMsg] = useState("");
@@ -22,7 +22,7 @@ function Login() {
         try {
 
             const response = await API.post("/login", {
-                username,
+                email,
                 password
             });
 
@@ -38,7 +38,7 @@ function Login() {
 
             console.log(error);
 
-            setErrorMsg("Invalid username or password. Please try again.");
+            setErrorMsg("Invalid email or password. Please try again.");
             setIsLoading(false);
 
         }
@@ -106,11 +106,11 @@ function Login() {
                     <form onSubmit={handleLogin}>
 
                         <input
-                            type="text"
-                            placeholder="Username"
+                            type="email"
+                            placeholder="Email"
                             className="login-input"
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                             disabled={isLoading}
                         />
 

@@ -60,7 +60,7 @@ def login(
     db: Session = Depends(get_db)
 ):
     existing_user = db.query(User).filter(
-        User.username == user.username
+        User.email == user.email
     ).first()
     if existing_user is None:
         raise HTTPException(
