@@ -195,6 +195,15 @@ def predict(data: PredictionInput):
 
 
 
+    if marks >= 40:
+
+        result_status = "Pass ✅"
+
+    else:
+
+        result_status = "Fail ❌"
+
+
 
 
     db.close()
@@ -211,7 +220,9 @@ def predict(data: PredictionInput):
         "predicted_marks":marks,
 
 
-        "performance":performance
+        "performance":performance,
+
+        "result":result_status
 
 
     }
