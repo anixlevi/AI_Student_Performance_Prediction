@@ -21,9 +21,9 @@ class Student(BaseModel):
 
     internal_marks: float
 
-    final_marks: float
+    final_marks: float | None = None
 
-    result: str
+    result: str | None = None
 
 
 
