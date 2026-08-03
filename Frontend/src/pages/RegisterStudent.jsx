@@ -11,16 +11,13 @@ function Register() {
 
     const [student, setStudent] = useState({
         name: "",
-        email: "",
         age: "",
         gender: "",
         attendance: "",
         study_hours: "",
         previous_marks: "",
         assignment_marks: "",
-        internal_marks: "",
-        final_marks: "",
-        result: ""
+        internal_marks: ""
     });
 
     const [successMessage, setSuccessMessage] = useState("");
@@ -36,16 +33,13 @@ function Register() {
     const resetFormOnly = () => {
         setStudent({
             name: "",
-            email: "",
             age: "",
             gender: "",
             attendance: "",
             study_hours: "",
             previous_marks: "",
             assignment_marks: "",
-            internal_marks: "",
-            final_marks: "",
-            result: ""
+            internal_marks: ""
         });
     };
 
@@ -113,17 +107,6 @@ function Register() {
                                     name="name"
                                     placeholder="Enter student name"
                                     value={student.name}
-                                    onChange={handleChange}
-                                />
-                            </div>
-
-                            <div className="form-group">
-                                <label>Email</label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    placeholder="Enter email address"
-                                    value={student.email}
                                     onChange={handleChange}
                                 />
                             </div>
@@ -204,28 +187,6 @@ function Register() {
                                     name="internal_marks"
                                     placeholder="Enter internal marks"
                                     value={student.internal_marks}
-                                    onChange={handleChange}
-                                />
-                            </div>
-
-                            <div className="form-group">
-                                <label>Final Marks</label>
-                                <input
-                                    type="number"
-                                    name="final_marks"
-                                    placeholder="Enter final marks"
-                                    value={student.final_marks}
-                                    onChange={handleChange}
-                                />
-                            </div>
-
-                            <div className="form-group">
-                                <label>Result</label>
-                                <input
-                                    type="text"
-                                    name="result"
-                                    placeholder="Pass / Fail"
-                                    value={student.result}
                                     onChange={handleChange}
                                 />
                             </div>
