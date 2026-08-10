@@ -732,17 +732,17 @@ The project can be further enhanced with modern AI and cloud technologies.
 - Student Portal
 
 ---
-
 # 🔑 Demo Login Credentials
 
-A demo account has been provided for reviewers and recruiters.
+A demo account has been provided for reviewers and recruiters to explore the application without registering.
 
-| Username | Password |
-|----------|----------|
-| **demo** | **Demo@1234** |
+| Email | Password |
+|-------|----------|
+| **demo@example.com** | **Demo@1234** |
 
 > **Note:** This account contains sample data only and has limited access.
 
+Alternatively, you can create your own account using the **Sign Up** option available on the login page.
 ---
 
 # 📊 Project Statistics
