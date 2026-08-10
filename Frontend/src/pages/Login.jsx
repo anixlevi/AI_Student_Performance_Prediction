@@ -1,7 +1,45 @@
 import { useState, useEffect } from "react";
 import API from "../api/axios";
 import { useNavigate } from "react-router-dom";
+import {
+    GraduationCap,
+    Bot,
+    BarChart3,
+    Users,
+    ShieldCheck,
+    Mail,
+    Lock,
+    LogIn,
+    Loader2
+} from "lucide-react";
 import "../css/login.css";
+
+const features = [
+    {
+        icon: Bot,
+        title: "AI Powered Prediction",
+        short: "Smart ML models forecast outcomes",
+        detail: "Our machine learning models analyze attendance, grades, and study patterns to predict student performance with high accuracy, helping educators intervene early."
+    },
+    {
+        icon: BarChart3,
+        title: "Real-Time Dashboard",
+        short: "Live insights at a glance",
+        detail: "Track class-wide and individual student trends through interactive charts that update instantly as new data comes in — no more waiting for weekly reports."
+    },
+    {
+        icon: Users,
+        title: "Student Management",
+        short: "Organize records effortlessly",
+        detail: "Add, edit, and manage student profiles, academic history, and performance records from a single, streamlined interface built for teachers and admins."
+    },
+    {
+        icon: ShieldCheck,
+        title: "Secure Authentication",
+        short: "Your data, fully protected",
+        detail: "Every login is protected with encrypted credentials and secure session handling, so student and institutional data stays private and safe."
+    }
+];
 
 function Login() {
 
@@ -12,8 +50,8 @@ function Login() {
     const [isLoading, setIsLoading] = useState(false);
     const [errorMsg, setErrorMsg] = useState("");
     const [showPatience, setShowPatience] = useState(false);
+    const [activeFeature, setActiveFeature] = useState(null);
 
-    // Show "please be patient" message only if loading takes longer than 2.5s
     useEffect(() => {
         let timer;
         if (isLoading) {
@@ -61,7 +99,6 @@ function Login() {
 
         <div className="login-page">
 
-            {/* Animated background blobs */}
             <div className="blob blob-1"></div>
             <div className="blob blob-2"></div>
             <div className="blob blob-3"></div>
@@ -71,48 +108,63 @@ function Login() {
 
                 <div className="brand">
 
+                    <div className="brand-badge">
+                        <GraduationCap size={14} /> AI-Powered EdTech
+                    </div>
 
-                    <h1>AI Student Performance <span>Prediction</span></h1>
+                    <h1>Λ𝙸 𝚂𝚝𝚞𝚍𝚎𝚗𝚝 𝙿𝚎𝚛𝚏𝚘𝚛𝚖𝚊𝚗𝚌𝚎 <span>𝙿𝚎𝚛𝚏𝚘𝚛𝚖𝚊𝚗𝚌𝚎</span></h1>
 
                     <p>
-                        Predict Student Performance using Artificial Intelligence
-                        and Machine Learning.
+                        Predict Student Performance using Artificial Intelligence and Machine Learning.
                     </p>
 
                 </div>
 
-                <div className="feature-box">
+                <div className="feature-layout">
 
-                    <div className="feature-card">
-                        <span className="feature-icon">🤖</span>
-                        <div>
-                            <h4>AI Powered Prediction</h4>
-                            <p>Smart ML models forecast outcomes</p>
-                        </div>
+                    <div className="feature-box">
+
+                        {features.map((f, i) => {
+                            const Icon = f.icon;
+                            return (
+                                <div
+                                    key={i}
+                                    className={`feature-card ${activeFeature === i ? "active" : ""}`}
+                                    onMouseEnter={() => setActiveFeature(i)}
+                                    onMouseLeave={() => setActiveFeature(null)}
+                                >
+                                    <span className="feature-icon"><Icon size={20} /></span>
+                                    <div>
+                                        <h4>{f.title}</h4>
+                                        <p>{f.short}</p>
+                                    </div>
+                                </div>
+                            );
+                        })}
+
                     </div>
 
-                    <div className="feature-card">
-                        <span className="feature-icon">📊</span>
-                        <div>
-                            <h4>Real-Time Dashboard</h4>
-                            <p>Live insights at a glance</p>
-                        </div>
-                    </div>
+                    <div className={`feature-detail-panel ${activeFeature !== null ? "visible" : ""}`}>
 
-                    <div className="feature-card">
-                        <span className="feature-icon">👨‍🎓</span>
-                        <div>
-                            <h4>Student Management</h4>
-                            <p>Organize records effortlessly</p>
-                        </div>
-                    </div>
+                        {activeFeature !== null && (
+                            <>
+                                <div className="feature-detail-icon">
+                                    {(() => {
+                                        const Icon = features[activeFeature].icon;
+                                        return <Icon size={26} />;
+                                    })()}
+                                </div>
+                                <h3>{features[activeFeature].title}</h3>
+                                <p>{features[activeFeature].detail}</p>
+                            </>
+                        )}
 
-                    <div className="feature-card">
-                        <span className="feature-icon">🔒</span>
-                        <div>
-                            <h4>Secure Authentication</h4>
-                            <p>Your data, fully protected</p>
-                        </div>
+                        {activeFeature === null && (
+                            <div className="feature-detail-placeholder">
+                                <span>👋 Hover a feature to learn more</span>
+                            </div>
+                        )}
+
                     </div>
 
                 </div>
@@ -125,7 +177,7 @@ function Login() {
 
                 <div className="login-card">
 
-                    <div className="login-icon">🔐</div>
+                    <div className="login-icon"><Lock size={24} color="#fff" /></div>
 
                     <h2>Welcome Back</h2>
 
@@ -149,7 +201,7 @@ function Login() {
                     <form onSubmit={handleLogin}>
 
                         <div className="input-group">
-                            <span className="input-icon">✉️</span>
+                            <span className="input-icon"><Mail size={16} /></span>
                             <input
                                 type="email"
                                 placeholder="Email"
@@ -161,7 +213,7 @@ function Login() {
                         </div>
 
                         <div className="input-group">
-                            <span className="input-icon">🔑</span>
+                            <span className="input-icon"><Lock size={16} /></span>
                             <input
                                 type="password"
                                 placeholder="Password"
@@ -191,11 +243,13 @@ function Login() {
                         >
                             {isLoading ? (
                                 <>
-                                    <span className="spinner"></span>
+                                    <Loader2 size={18} className="spin-icon" />
                                     Logging in...
                                 </>
                             ) : (
-                                <>🔐 Login</>
+                                <>
+                                    <LogIn size={18} /> Login
+                                </>
                             )}
                         </button>
 
