@@ -94,7 +94,7 @@ function Signup() {
 
     return (
 
-        <div className="login-page">
+        <div className="login-page signup-page">
 
             <div className="blob blob-1"></div>
             <div className="blob blob-2"></div>

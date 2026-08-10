@@ -492,3 +492,22 @@ body {
     .login-card { max-width: 420px; }
 
 }
+
+/* ---------------- SIGNUP PAGE ONLY OVERRIDES ---------------- */
+
+.signup-page .feature-detail-panel {
+    opacity: 1;
+    align-items: center;
+    text-align: center;
+}
+
+.signup-page .feature-detail-panel.visible {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.signup-page .feature-detail-placeholder {
+    font-size: 14px;
+    font-weight: 500;
+    color: #94a3b8;
+}
