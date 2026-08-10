@@ -7,13 +7,40 @@ import {
     BarChart3,
     Users,
     ShieldCheck,
-    UserPlus,
     User,
     Mail,
     Lock,
+    UserPlus,
     Loader2
 } from "lucide-react";
 import "../css/login.css";
+
+const features = [
+    {
+        icon: Bot,
+        title: "AI Powered Prediction",
+        short: "Smart ML models forecast outcomes",
+        detail: "Our machine learning models analyze attendance, grades, and study patterns to predict student performance with high accuracy, helping educators intervene early."
+    },
+    {
+        icon: BarChart3,
+        title: "Real-Time Dashboard",
+        short: "Live insights at a glance",
+        detail: "Track class-wide and individual student trends through interactive charts that update instantly as new data comes in — no more waiting for weekly reports."
+    },
+    {
+        icon: Users,
+        title: "Student Management",
+        short: "Organize records effortlessly",
+        detail: "Add, edit, and manage student profiles, academic history, and performance records from a single, streamlined interface built for teachers and admins."
+    },
+    {
+        icon: ShieldCheck,
+        title: "Secure Authentication",
+        short: "Your data, fully protected",
+        detail: "Every login is protected with encrypted credentials and secure session handling, so student and institutional data stays private and safe."
+    }
+];
 
 function Signup() {
 
@@ -23,20 +50,22 @@ function Signup() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
+    const [errorMsg, setErrorMsg] = useState("");
+    const [activeFeature, setActiveFeature] = useState(null);
 
     const handleSignup = async (e) => {
 
         e.preventDefault();
-        setError("");
+
+        setErrorMsg("");
 
         if (password !== confirmPassword) {
-            setError("Passwords do not match");
+            setErrorMsg("Passwords do not match");
             return;
         }
 
-        setLoading(true);
+        setIsLoading(true);
 
         try {
 
@@ -49,16 +78,16 @@ function Signup() {
             navigate("/login");
 
         }
-        catch (err) {
+        catch (error) {
 
-            console.log(err);
+            console.log(error);
 
-            const detail = err?.response?.data?.detail || "Signup failed. Please try again.";
-            setError(detail);
+            const detail = error?.response?.data?.detail || "Signup failed. Please try again.";
+            setErrorMsg(detail);
 
         }
         finally {
-            setLoading(false);
+            setIsLoading(false);
         }
 
     };
@@ -74,59 +103,65 @@ function Signup() {
             {/* Left Side */}
             <div className="login-left">
 
-                <div className="brand-badge">
-                    <GraduationCap size={16} />
-                    AI-Powered EdTech
-                </div>
-
                 <div className="brand">
-                    <h1>AI Student <span>Performance</span></h1>
+
+                    <div className="brand-badge">
+                        <GraduationCap size={14} /> AI-Powered EdTech
+                    </div>
+
+                    <h1>Λ𝙸 𝚂𝚝𝚞𝚍𝚎𝚗𝚝 𝙿𝚎𝚛𝚏𝚘𝚛𝚖𝚊𝚗𝚌𝚎 <span>𝙿𝚎𝚛𝚏𝚘𝚛𝚖𝚊𝚗𝚌𝚎</span></h1>
+
                     <p>
-                        Predict Student Performance using Artificial Intelligence
-                        and Machine Learning.
+                        Predict Student Performance using Artificial Intelligence and Machine Learning.
                     </p>
+
                 </div>
 
-                <div className="feature-box" style={{ marginTop: "32px" }}>
+                <div className="feature-layout">
 
-                    <div className="feature-card">
-                        <div className="feature-icon">
-                            <Bot size={20} />
-                        </div>
-                        <div>
-                            <h4>AI Powered Prediction</h4>
-                            <p>Smart ML models forecast outcomes</p>
-                        </div>
+                    <div className="feature-box">
+
+                        {features.map((f, i) => {
+                            const Icon = f.icon;
+                            return (
+                                <div
+                                    key={i}
+                                    className={`feature-card ${activeFeature === i ? "active" : ""}`}
+                                    onMouseEnter={() => setActiveFeature(i)}
+                                    onMouseLeave={() => setActiveFeature(null)}
+                                >
+                                    <span className="feature-icon"><Icon size={20} /></span>
+                                    <div>
+                                        <h4>{f.title}</h4>
+                                        <p>{f.short}</p>
+                                    </div>
+                                </div>
+                            );
+                        })}
+
                     </div>
 
-                    <div className="feature-card">
-                        <div className="feature-icon">
-                            <BarChart3 size={20} />
-                        </div>
-                        <div>
-                            <h4>Real-Time Dashboard</h4>
-                            <p>Live insights at a glance</p>
-                        </div>
-                    </div>
+                    <div className={`feature-detail-panel ${activeFeature !== null ? "visible" : ""}`}>
 
-                    <div className="feature-card">
-                        <div className="feature-icon">
-                            <Users size={20} />
-                        </div>
-                        <div>
-                            <h4>Student Management</h4>
-                            <p>Organize records effortlessly</p>
-                        </div>
-                    </div>
+                        {activeFeature !== null && (
+                            <>
+                                <div className="feature-detail-icon">
+                                    {(() => {
+                                        const Icon = features[activeFeature].icon;
+                                        return <Icon size={26} />;
+                                    })()}
+                                </div>
+                                <h3>{features[activeFeature].title}</h3>
+                                <p>{features[activeFeature].detail}</p>
+                            </>
+                        )}
 
-                    <div className="feature-card">
-                        <div className="feature-icon">
-                            <ShieldCheck size={20} />
-                        </div>
-                        <div>
-                            <h4>Secure Authentication</h4>
-                            <p>Your data, fully protected</p>
-                        </div>
+                        {activeFeature === null && (
+                            <div className="feature-detail-placeholder">
+                                <span>👋 Hover a feature to learn more</span>
+                            </div>
+                        )}
+
                     </div>
 
                 </div>
@@ -134,13 +169,12 @@ function Signup() {
             </div>
 
             {/* Right Side */}
+
             <div className="login-right">
 
                 <div className="login-card">
 
-                    <div className="login-icon">
-                        <UserPlus size={26} color="white" />
-                    </div>
+                    <div className="login-icon"><UserPlus size={24} color="#fff" /></div>
 
                     <h2>Create Account</h2>
 
@@ -148,80 +182,75 @@ function Signup() {
                         Sign up to start using the AI Student Performance Prediction System
                     </p>
 
-                    {error && <div className="login-error">{error}</div>}
+                    {errorMsg && (
+                        <div className="login-error">
+                            ⚠️ {errorMsg}
+                        </div>
+                    )}
 
                     <form onSubmit={handleSignup}>
 
                         <div className="input-group">
-                            <span className="input-icon">
-                                <User size={18} />
-                            </span>
+                            <span className="input-icon"><User size={16} /></span>
                             <input
                                 type="text"
                                 placeholder="Choose a username"
                                 className="login-input"
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
-                                required
+                                disabled={isLoading}
                             />
                         </div>
 
                         <div className="input-group">
-                            <span className="input-icon">
-                                <Mail size={18} />
-                            </span>
+                            <span className="input-icon"><Mail size={16} /></span>
                             <input
                                 type="email"
                                 placeholder="Enter your email"
                                 className="login-input"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                required
+                                disabled={isLoading}
                             />
                         </div>
 
                         <div className="input-group">
-                            <span className="input-icon">
-                                <Lock size={18} />
-                            </span>
+                            <span className="input-icon"><Lock size={16} /></span>
                             <input
                                 type="password"
                                 placeholder="Choose a password"
                                 className="login-input"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                required
+                                disabled={isLoading}
                             />
                         </div>
 
                         <div className="input-group">
-                            <span className="input-icon">
-                                <Lock size={18} />
-                            </span>
+                            <span className="input-icon"><Lock size={16} /></span>
                             <input
                                 type="password"
                                 placeholder="Confirm password"
                                 className="login-input"
                                 value={confirmPassword}
                                 onChange={(e) => setConfirmPassword(e.target.value)}
-                                required
+                                disabled={isLoading}
                             />
                         </div>
 
                         <button
                             type="submit"
                             className="login-btn"
-                            disabled={loading}
+                            disabled={isLoading}
                         >
-                            {loading ? (
+                            {isLoading ? (
                                 <>
                                     <Loader2 size={18} className="spin-icon" />
                                     Creating Account...
                                 </>
                             ) : (
                                 <>
-                                    <UserPlus size={18} />
-                                    Create Account
+                                    <UserPlus size={18} /> Create Account
                                 </>
                             )}
                         </button>
@@ -229,10 +258,13 @@ function Signup() {
                     </form>
 
                     <div className="register-link">
+
                         Already have an account?
-                        <span onClick={() => navigate("/login")}>
+
+                        <span onClick={() => navigate("/login")} style={{ cursor: "pointer" }}>
                             Login
                         </span>
+
                     </div>
 
                 </div>
