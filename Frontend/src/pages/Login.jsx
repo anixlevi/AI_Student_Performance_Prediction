@@ -71,7 +71,6 @@ function Login() {
 
                 <div className="brand">
 
-                    <div className="brand-badge">🎓 AI-Powered EdTech</div>
 
                     <h1>AI Student Performance <span>Prediction</span></h1>
 
