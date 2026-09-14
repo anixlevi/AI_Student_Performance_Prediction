@@ -2,12 +2,13 @@ name: Keep Backend Alive
 
 on:
   schedule:
-    - cron: '*/10 * * * *'   # har 10 minute mein chalega
-  workflow_dispatch:          # manually bhi run kar sakte hain GitHub UI se
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
 
 jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
       - name: Ping Backend
-        run: curl -s -o /dev/null -w "Status: %{http_code}\n" https://anix-ai-student-performance-prediction.onrender.com/
+        run: |
+          curl -s -o /dev/null -w "Status: %{http_code}\n" https://anix-ai-student-performance-prediction.onrender.com/
